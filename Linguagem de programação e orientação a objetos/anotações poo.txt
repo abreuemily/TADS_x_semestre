@@ -1,0 +1,42 @@
+- Dados dos vetores são do mesmo tamanho para serem encontrados mais rápido.
+- Há coleções de coisas concretas e não-concretas. ex: num hospital, há pacientes, funcionários, remedios... já numa escola, há disciplinas (não-concreto)
+- Declaração de variável --> aloca espaço na memória, define tipo e o apelido.
+- variáveis primitivas --> já vêm na propria linguagem. ex : bolean, double, int...
+- Inicializar --> primeiro valor atribuido a uma variavel
+- dá para criar um noto tipo de variável no java, sendo um aglomerado de tipos primitivos. A ordem do aglomerado deve ser bem definido para não dar erro.
+- Num projeto em java, sempre tem que ter um cabeçalho. A sintaxe:
+
+ public static void main(String[] args) {
+
+o que fica neste espaço é o corpo. Isso tudo se chama método.
+
+
+}
+- declaração de variáveis pode acontecer fora do cabeçalho, acima. Assim, ela pode ser usada em mais de um método.
+- ponto e virgula (;): sempre inserir ao final dos comandos. Nunca por no cabeçalho.
+- System.out.println("") --> saída de dados. 
+- comentário --> // para uma linha, 
+
+/* Para mais de uma linha
+   jhgdfglkdjrghlkjter
+*/ 
+
+- pra usar o if sem delimitar as chaves, ele deve ter só uma linha. Se tiver mais de uma, deve-se usar chaves. sintaxe:
+
+if (tarara)
+{
+
+taltaltal
+
+}
+
+- Camel case --> semcamelcase, comCamelCase. É melhor usar o camel case.
+
+
+
+
+
+
+
+
+
