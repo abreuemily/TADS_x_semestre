@@ -1,2 +1,47 @@
-quem controla os endereçamentos ip no brasil --> registro.br
-quando se diz endereço, se relaciona com nome de domínio. não pode ter dois iguais.
+- comunicação de dados: troca de dados entre dois dispositivos. Eles devem fazer parte de um sistema de comunicações (combinação de hardware e software)
+- a eficacia depende de 4 características: entrega, precisão, sincronização, jitter (variação no tempo de chegada dos pacotes)
+- componentes do sistema de comunicação de dados --> 
+	mensagem: são os dados a serem transmitidos
+	emissor: dispositivo que envia (computador, telefone, tv...)
+	receptor: dispositivo que recebe(computador, tv...)
+	meio de transmissão: caminho físico pelo qual a mensagem trafega (cabo de par trançado, coaxial, fibra óptica e ondas de rádio)
+	protocolo: conjunto de regras que controla a comunicação de dados
+- quem controla os endereçamentos ip no brasil --> registro.br
+- quando se diz endereço, se relaciona com nome de domínio. não pode ter dois iguais.
+- em redes, se trabalha muito com 8 bits
+- ipv4: formado por x.y.z.w, cada um valendo 8 bits, sendo 32 bits no total, ou seja, o máximo de endereços possiveis são 2³². o maior valor possível com isso é 255. Ou seja, num endereço ipv4 somente tem valores entre 0 e 255.
+- o endereço ipv4 usa os sistemas binario e decimal
+- hexadecimal: dá para representar grandes valores com poucos símbolos
+
+
+-Forouzan, Behrouz A. Comunicação de dados e redes de
+computadores. Tradução: Ariovaldo Griesi ; revisão técnica: Jonas
+Santiago de Oliveira. – 4. ed. Porto Alegre : AMGH, 2010.
+-Kurose, James F. Redes de computadores e a Internet: uma
+abordagem top-down. Tradução Daniel Vieira; revisão técnica
+Wagner Luiz Zucchi. – 6. ed. – São Paulo: Pearson Education do
+Brasil, 2013. --> referencias da disciplina
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
