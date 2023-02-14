@@ -1,0 +1,86 @@
+este arquivo .txt conterá anotações relacionadas a linguagem java.
+
+- o código fica dentro de uma classe. a sintaxe dessa classe é:
+
+não sei o que nome do projeto { (abriu a chave 1) --> define o ponto de entrada do programa
+
+	código fonte.......{ (chave 2)
+		...........
+		................
+	} (chave 2)
+
+} (fechou a chave 1)
+
+sintaxe para variáveis em java --> <tipo> <#nome> = <&valor inicial>;
+                                   ex:int  #nome da variável  &opcional
+
+tipos de variáveis em java:
+- tipos numéricos inteiros --> byte (número negativo ou positivo pequeno - vai até |127|), short (número maior), int (número maior ainda), long (número maior pra cacete)
+- tipos numéricos com ponto flutuante --> float, double (mesmo esquema dos inteiros, o mais comum de usar é o double)
+- um caractere unicode --> char (1 caractere. Tem que estar entre aspas simples. Pode digitar o caractere ou o codigo dele que pode ser encontrado no site unicode-table.com)
+- valor verdade --> boolean (se não declarar, o valor pardrão é false)
+- string
+
+regras para nome de variável:
+- não começar com número
+- não usar acento
+- não ter espaço entre as palavras
+- começar com letra minúscula
+- se for uma frase, escrever tudo junto e a cada palavra (menos a primeira, claro), por letra maiúscula
+
+É possível definir todas as variáveis logo no início do código, igual o portugol. Se a variável for do tipo float, na frente dos valores que for usar é bom pôr um f pra não dar problema. Se for double, é bom colocar o valor x.0
+Casting --> afirmar para o sistema que você quer uma resposta de um cálculo com outro tipo de variável. Sintaxe:
+
+a = (double) 5 / 2; --> por exemplo.
+
+Entrada de dados no java --> a sintaxe é assim:
+
+import java.util.Scanner; --> é preciso importar a variável de input. Primeira linha do código.
+..................................
+.................................. --> coisas triviais...
+		Scanner sc = new Scanner(System.in); --> sc é o nome da variável de input. 
+		............ --> definição de variáveis
+		x = sc.next(); --> nessa parte que o programa vai começar a rodar pedindo a entrada do dado. Nesse exemplo, só funciona pra string. Pra número, tem que digitar sc.Doublenext() ou sc.Intnext()
+		........... --> saída do dado
+		sc.close(); --> no final, é preciso encerrar o uso da variável. Mt estranho kkkkk
+
+Obs: na saída de dado, se usar o println, você vai ter de digitar o número com ponto e o sistema vai mostrar número com vírgula. Se usar printf, você vai ter de digitar o número com vírgula e o sistema vai mostrar número com vírgula. Se quiser digitar e receber o dado numérico com ponto, é preciso importar o Locale.US antes de definir a variável de entrada de dados.
+
+Entrada de dados com variável char --> a sintaxe é assim:
+
+a = sc.next().charAt(0); --> se o sujeito digitar mais de uma letra, o sistema vai ler só a primeira.
+
+Se quiser, pode pôr mais de uma entrada de dados de diferentes tipos em sequência, pode pôr normalmente. Na hora de digitar os dados para o sistema ler, eles devem ficar na mesma linha separados por um espaço e na ordem que está no código.
+
+Como mudar pra inglês o idioma do java --> a sintaxe:
+
+Locale.Default(Locale.US); --> vai dar um erro, mas é só selecionar a primeira opção de ajuste que o sistema vai mostrar (vai importar a função Locale)
+
+Ctrl+shift+F --> atalho de auto identação.
+
+Para não dar aquele probleminha de ter que digitar os dados separados por um espaço, a sintaxe muda um pouco:
+
+a = sc.nextLine(); --> assim, é possivel ter como entrada uma frase, ou até apertar Enter.
+
+Se colocar um sc.nextInt(), por exemplo, antes de sc.nextLine() seguidos, dá um probleminha. Para resolver, depois do sc.nextInt(), tem que colocar um sc.nextLine() (sozinho mesmo).
+
+funções matemáticas em java sintaxe -->
+
+a = Math.sqrt(x); --> raiz quadrada
+a = Math.pow(x, y); --> potência
+a = Math.abs(x); --> módulo
+  
+obs --> sempre prestar atenção nas letras maiúsculas
+
+Para mais informações sobre fórmulas em java, acesse java.lang.Math
+
+ctrl + shift + o --> importação automática 
+
+Usando o debug no eclipse --> o debug é um modo de visualização da execução do progama linha a linha, mais uma tabela para acompanhar as atribuições de valores as variáveis. como usar:
+
+1º posicione o cursor na linha desejada, selecione run-->toggle breakpoint;
+2º em vez de rodar o programa normalmente, selecione debug as-->java aplication
+3º já no modo debug, para executar as linhas, precione f6
+4º para interromper o debug, selecione o botão vermelho.
+
+site para fazer exercicios de várias linguagens --> uri online judje

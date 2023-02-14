@@ -34,7 +34,7 @@ taltaltal
 
 - entrada de dados com dialogo --> (JOption.showInputDialog(aqui fica a mensagem)); --> import javax.swing.JOptionPane; (esse é o import para a caixa de texto funcionar)
 - porém, desse modo, o sistema consegue ler apenas string. Para converter para inteiro, usa-se o comando Integer.parseInt(aqui dentro fica o comando da caixa de texto)
-
+- Double.parseDouble(aqui fica o comando da caixa de texto) --> faz com que a caixa de dialogo aceite numeros doubles
 
 
 
