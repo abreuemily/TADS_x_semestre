@@ -22,23 +22,24 @@ abordagem top-down. Tradução Daniel Vieira; revisão técnica
 Wagner Luiz Zucchi. – 6. ed. – São Paulo: Pearson Education do
 Brasil, 2013. --> referencias da disciplina
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- a ideia do hub (equipamento nivel 1 de enlace (camada 1)) é colocar vários equipamentos juntos interligados. mas apenas um de cada vez utiliza a rede. se pôr muitos juntos, vai degradar a rede.
+- hub é um concentrador de ligações somente
+- switch --> equipamento nivel 2 de enlace (camada 2). cuidado com os switches nível 3 no mercado (graças aos softwares que instalam nele), pois ele é só nível 2. em relação ao hub, ele é mais inteligente.
+- cada conecção do switch é uma porta conectada pelo rj45. no computador, deve ser patch cord ou patch cable. computador(nic) --cabo utp (par trançado)-->switch
+- o switch guarda a informação do endereçamento fisico da maquina, chamado mac (já vem gravado de máquina). ele utiliza para conectar grupos de máquinas (com comutação) e elas trabalharem simultaneamente.
+- appliance --> aparelho multiuso graças a uma série de softwares que realisa tarefas específicas (as operadoras de internet chamam de roteador). Atrás do appliance tem duas entradas: wan (conecta internet) e lan (é o switch)
+- roteador --> camada 3. Analisa o endereço ip. interliga duas redes diferentes. tem duas portas pelo menos: para a rede interna e para a rede externa (rede do provedor). normalmente em baixo do roteador tem o endereço ip, user e senha
+- critérios atendidos por redes de computadores: desempenho, confiabilidade, segurança (mais informações no primeiro slide, pag. 58)
+- quando o atraso é muito alto, não se consegue executar quase nada.
+- processamento distribuido --> dividir tarefas entre varios computadores (ambiente transparente). ainda é muito teórico, pois teria que haver o controle desses computadores. hoje, ainda não há um produto que faça isso. 
+- hospedeiros ou sistemas finais ou nó --> muitos dispositivos hoje tem endereçamento mac (são capazes de de se conectar a internet). IOT: internet das coisas (a ideia é conectar absolutamente tudo a internet)
+- link --> pode-se usar qualquer meio, é dado por bit/s. tipos de conecção com link: ponto a ponto (ppp), multiponto (mais informações no primeiro slide pag. 70)
+- topologia --> como será o layout. ha logica e fisica (mais informações no primeiro slide pag. 72)
+- em topologia, tem-se rede em anel (token ring --> o token vai passando de estação em estação transportando informações de uma estação  para outra), geralmente redes metropolitanas trabalham assim, é muito rápido(ilustração no slide pag. 77)
+- barramento (backbone) --> por onde passa grande quantidade de tráfego. é conectado num hub as estações, se uma manda uma unformação, todos recebem (broadcast) (diz-se que fica no modo promíscuo). não funciona no switch porque nele, a informação vai direto para o destino (ele é mais inteligente)
+- rede em estrela --> cada estação conectada num hub. uma envia, todos recebem (ilustração no slide pag 81)
+- malha --> cada estação é conectada em todas as outras.
+- rede hibrida --> mistura mais de uma arquitetura (ilustrações no slide pag. 84)
 
 
 
