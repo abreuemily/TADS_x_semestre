@@ -40,6 +40,48 @@ Brasil, 2013. --> referencias da disciplina
 - rede em estrela --> cada estação conectada num hub. uma envia, todos recebem (ilustração no slide pag 81)
 - malha --> cada estação é conectada em todas as outras.
 - rede hibrida --> mistura mais de uma arquitetura (ilustrações no slide pag. 84)
+- três conceitos principais são Lan, Man e Wan, mas existem outros menos usados
+- san (storage area network) --> antes se utilizava computador de grande porte (main frame), conectado no console. as necessidades foram aumentando (era preciso 10, 20, 50 servidores...)
+- evolução do main frame --> blade continha laminas (placas mãe) e um software para administrar (hipervisor) responsavel tb pela virtualização (criação de maquinas virtuais). com isso a necessidade de armazenamneto aumentou, e criou-se um storage (tipo um blade, mas com hd dentro)
+- com isso, a comunicação entre os dois precisava ser muito rápida, daí criou-se a San (vms conectadas com dispositivos de armazenamento). há um método específico para fazer backup.
+- Lan --> rede de área local. conecta os equipamentos para trocarem dados. cobrem uma área limitada
+- os nomes das redes eram dados baseado no alcance, mas isso entrou em desuso.
+- Wlan --> rede local sem fio (muito usada nas casas)
+- firewall --> protege a rede interna dos ataques externos. existe em forma de hardware (appliance) e software. ele atua como um roteador que controla o que acontece de dentro pra fora e vice versa
+- Pan (rede de área pessoal) --> os dispositivos são conectados por bluetooth ou wifi. você cria a própria rede (redes adop) uma caracteristica específicae que os aparelhos conectados precisam de carga (que é limitada)
+- Man --> rede de área metropolitana. interliga-se vários switches que conecta via fibra ótica, cria-se um anel ótico (token ring), assim cria-se uma conecção rápida (pelo menos 1G)
+- Wan --> rede de area alargada ou de longa distância. abrange o mundo todo. há a conecção de varias máquinas e acontece a comutação. se conecta a internet atraves de um provedor (são eles que mantem os endereçamentos). roteadores de bordo são os provedores. 
+- internet é uma rede de redes conectadas. temos o nucleo da rede e as maquinas são conectadas com roteadores
+- Ran --> maior que Man e menor que Wan. 
+-  no nivel 2 de enlace, a padronização das redes é feita pelo IEEE (i três e). 
+- Can --> rede de campus.  tem um backbone, a partir daí  acessa-se a rede (é cabeado) 
+- internet --> rede de computadores mundial. os hospedeiros são chamados de host. o particular dá acesso ao publico e vice versa
+- governo americano quiz uma estrutura distribuida. a primeira rede foi a arpanet. mais informações no slide
+- camada 4 --> protocolo tcp (transporte) camada 3 --> protocolo ip (roteamento)
+- hosts.txt --> usado para conectar uma maquina a outra na época da arpanet. esse arquivo existe até hoje e funciona
+- quem controla o endereçamento ip é a empresa IANA (estadunidense)
+- 
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
