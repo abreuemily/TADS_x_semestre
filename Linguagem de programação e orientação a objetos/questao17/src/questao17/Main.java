@@ -1,5 +1,7 @@
 package questao17;
 
+import javax.swing.JOptionPane;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -8,6 +10,27 @@ public class Main {
 		//gasta por uma residência e exiba na tela: O valor em reais de cada quilowatt, 
 		//o valor em reais a ser pago e o novo valor a ser pago por essa residência com um 
 		//desconto de 10%.
+		
+		
+		
+		int quilo = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a quantidade de quilowatts gastos:"));
+		int salario = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o salário mínimo atual:"));
+		if (quilo < 0 || salario < 0) {
+			JOptionPane.showMessageDialog(null, "Valores inválidos! (animal)");
+
+		}
+		else {
+			double valorquilo = (salario / 7) / 100;
+			double quilogasto = valorquilo * quilo;
+			double descquilo = quilogasto * 0.9;
+			JOptionPane.showMessageDialog(null, String.format("Valor por quilowatt: R$ %.2f%nValor a ser pago: R$ %.2f%nValor a ser pago com desconto: R$ %.2f", valorquilo, quilogasto, descquilo));
+		}
+		
+		
+
+
+
+
 		
 
 
