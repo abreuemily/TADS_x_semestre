@@ -1,4 +1,4 @@
-package lista31questao;
+package questao31;
 import javax.swing.JOptionPane;
 public class Main {
 
