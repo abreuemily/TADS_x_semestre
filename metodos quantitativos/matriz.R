@@ -67,3 +67,56 @@ sum(u)
 #determinante
 A <- matrix(c(4, 2, 9, 1), nrow = 2, byrow = TRUE)
 det(A)
+
+#traço de uma matriz quadrada
+
+A  <- matrix(data = seq(from = 1, to = 9, by = 1), nrow=3, byrow=TRUE)
+A
+diag(A) #diagonal da matriz
+sum(diag(A)) #traço da matriz (soma dos elementos da diagonal principal)
+
+library(matrixcalc)
+matrix.trace(A)
+
+# inversão de matrizes
+
+X <- matrix(c(1,1,1,3,-2,1,2,1,-1), nrow = 3, ncol = 3, byrow = T)
+X
+det(X) #se o det é diferente de zero
+solve(X) #inversa X^-1 
+
+#X^-1 * X = I (igual a identidade)
+round(solve(X)%*%X,1)  #verificação
+solve(X)%*% X  #verificação
+
+# aplicações de matrizes
+#abaixo as notas de cinco alunos em  math,  port e programação
+X <- matrix(c(90,   60, 90,
+              90,   90, 30,
+              60,   60, 60,
+              60,   60, 90,
+              30,   30, 30),byrow=TRUE,nrow = 5,ncol = 3)
+X
+dim(X)[1]
+n <- nrow(X) #mesmo que dim(X)[1]
+rep(1, times = n)
+n
+uns <- matrix(rep(1, times = n), ncol = 1)
+uns
+t(uns) %*% X #somatória colunas
+t(uns)%*%X*(1/n)# médias
+
+uns%*%t(uns)%*%X
+
+uns%*%t(uns)%*%X*(1/n) # matriz com colunas de médias
+
+
+#desvios = X - Xbar ou X - média
+D <- X-uns%*%t(uns)%*%X*(1/n) # desvios
+D
+
+DD<-t(D)%*%D # desvios ao quadrado
+DD
+# DD / (n - 1) = Var-Cor
+S <- DD*(1/(n-1)) # Var-Cov
+S
