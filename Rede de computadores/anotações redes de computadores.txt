@@ -60,10 +60,22 @@ Brasil, 2013. --> referencias da disciplina
 - camada 4 --> protocolo tcp (transporte) camada 3 --> protocolo ip (roteamento)
 - hosts.txt --> usado para conectar uma maquina a outra na época da arpanet. esse arquivo existe até hoje e funciona
 - quem controla o endereçamento ip é a empresa IANA (estadunidense)
+- dns --> busca qual o ip relacionado ao nome do site. Daí começa o processo de conexão. Depois começa a transferencia de dados. Mas não necessariamente os dados vem pelo mesmo caminho, podem seguir rotas diferentes, e vêm pra máquina do user. no meio do caminho há os roteadores que podem estar envolvidos nesse processo.
+- o roteador tem pelo menos duas portas: de entrada e saída de dados. de um lado ele liga a rede de casa com a wan. ele estabelece qual caminho o pacote/datagrama (3) vai seguir.
+- como os endereços ip precisam ser únicos, é preciso um controle rígido. quando as opções começaram a se esgotar, criou-se técnicas para aumentar a vida útil desses endereços.
+- gateway ou proxy --> NAT (endereçamento de rede). tem um endereço público e um local (externo e interno). o gateway tem um endereço interno
+- os provedores não conectam a gente diretamente na internet, cria um gateway. daí ele pede a informação para o provedor (internet). o ip da maquina é não roteável, quem aparece é o ip do gateway
+- com essa técnica NAT é possível repetir ips
+- mapeamento de portas --> relaciona o ip publico, uma porta específica (endereçamento nivel 4) a um endereçamento interno e uma porta específica. assim é possível, de fora, digitar o endereço publico e ser direcionado
+- intranet --> rede privada com a infraestrutura semelhante a da internet. só é acessível de dentro da empresa. a ideia é oferecer serviços numa rede local com serviços da internet. 
+- extranet --> é uma intranet, pode ser acessada via web (de fora da empresa), mas com restrições para alguns usuários. pode ser acessada via vpn
+- internet --> é a rede pública 
+- sistemas finais --> tudo que é usado para fazer acesso a iternet (pc, servidores...)
+- arquitetura cliente/servidor --> é a estrutura que conecta o user ao server da empresa
+- modo de transmição--> no momento que acessa algo na internet, pode ser orientado a conexão (é obrigatório para acessar o conteúdo/transferencia de dados (apresentação) (three way handshake), depois, é desconectado. Com certeza todas as informações serão transferidas. também há o controle de fluxo e congenstionamneto para um não sobrecarregar o outro) ou não
+- tcp --> camada de nível 4. varios protocolos utilizam
+- não orientado a conexão --> não há apresentação, não há garantia que a informação vai chegar. Pode ser com ou sem confirmação de recebimento da informação. usa um protocolo simples e rápido (UDP). mas não dá garantia nenhuma, o que intereça é a rapidez que a informação chega
 - 
-- 
-
-
 
 
 
