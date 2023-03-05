@@ -8,16 +8,21 @@ public class Main {
 		// 63. Faça um programa que entre com a sigla do Estado de uma pessoa e imprima uma das 
 		//mensagens: carioca, paulista, mineiro, outros estados
 		String estado = JOptionPane.showInputDialog(null, "Informe a sigla do seu estado:");
+		String est = estado.toLowerCase();
+		String cari = "rj";
+		String paul = "sp";
+		String min = "mg";
+
 		
-		if (estado == "RJ" || estado == "Rj" || estado == "rj" || estado == "rJ") {
+		if (est == cari) {
 			JOptionPane.showMessageDialog(null, "Carioca");
 
 		}
-		else if (estado == "SP" || estado == "Sp" || estado == "sp" || estado == "sP") {
+		else if (est == paul) {
 			JOptionPane.showMessageDialog(null, "Paulista");
 
 		}
-		else if (estado == "MG" || estado == "Mg" || estado == "mg" || estado == "mG") {
+		else if (est == min) {
 			JOptionPane.showMessageDialog(null, "Mineiro");
 
 		}
@@ -25,7 +30,6 @@ public class Main {
 			JOptionPane.showMessageDialog(null, "Outros estados");
 
 		}
-		
 
 
 	}
