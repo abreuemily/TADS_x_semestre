@@ -9,27 +9,23 @@ public class Main {
 		//mensagens: carioca, paulista, mineiro, outros estados
 		String estado = JOptionPane.showInputDialog(null, "Informe a sigla do seu estado:");
 		String est = estado.toLowerCase();
-		String cari = "rj";
-		String paul = "sp";
-		String min = "mg";
-
-		
-		if (est == cari) {
+	
+		switch (est) {
+		case "rj":
 			JOptionPane.showMessageDialog(null, "Carioca");
-
-		}
-		else if (est == paul) {
+			break;
+		case "sp":
 			JOptionPane.showMessageDialog(null, "Paulista");
-
-		}
-		else if (est == min) {
+			break;
+		case "mg":
 			JOptionPane.showMessageDialog(null, "Mineiro");
-
-		}
-		else {
+			break;
+		default:
 			JOptionPane.showMessageDialog(null, "Outros estados");
+			break;
 
 		}
+		
 
 
 	}
