@@ -75,10 +75,27 @@ Brasil, 2013. --> referencias da disciplina
 - modo de transmição--> no momento que acessa algo na internet, pode ser orientado a conexão (é obrigatório para acessar o conteúdo/transferencia de dados (apresentação) (three way handshake), depois, é desconectado. Com certeza todas as informações serão transferidas. também há o controle de fluxo e congenstionamneto para um não sobrecarregar o outro) ou não
 - tcp --> camada de nível 4. varios protocolos utilizam
 - não orientado a conexão --> não há apresentação, não há garantia que a informação vai chegar. Pode ser com ou sem confirmação de recebimento da informação. usa um protocolo simples e rápido (UDP). mas não dá garantia nenhuma, o que intereça é a rapidez que a informação chega
-- 
-
-
-
+- arquitetura em camadas --> organiza as funções para que ocorra serviços semelhantes na origem e destino. é comparavel a um algoritmo de viagem. organizar em camadas, cada camada com uma função especifica, cada uma tem um protocolo, cada uma faz uma coisa especifica, isso existe num conjunto de softwares e hardwares. 
+- se uma camada é alterada, as outras não se afetam
+- modelo osi --> mais informações no slide. é organizado em camadas
+- arquitetura de redes --> camadas de protocolos. formada por niveis, tb um conjunto de hard e softwares. mais informações no slide
+- comunicação em sistema aberto --> implementado a partir de uma padronização de protocolo (tcp ip) entre as grandes empresas. um sistema se comunica com qualquer outro com o mesmo conjunto de protocolos.
+- modelo de referencia osi --> (interconecção de sistemas abertos) cada camada executa um conjunto definido de funções para haver a troca de informações entre sistemas. são 7 camadas (mais informações no slide)
+- cada camada vai inserindo cabeçalhos nos dados para ocorrer a transmissão. ou seja, vai inserindo coisa a mais, isso é chamado overhead. ele pode ser maior (geralmente não estão orientados a rede) ou menor (maior garantia) dependendo da camada. 
+- objetivo --> todo mundo pode criar hard e software baseado no padrão
+- pontos de acesso aos serviços são usados no endereçamento
+- entidade --> cada camada possui uma ou mais. representado por um conjunto de funções. dentro do mesmo nivel (mesma camada, users diferentes), são chamadas de entidades pares
+- sempre vai a inforrmação de endereçamento na comunicação entre camadas
+- pci --> são os cabeçalhos
+- sdu --> unidade de dados do serviço. 
+- os dois se juntam e nasce uma informação de controle do protocolo (unidade de dados do protocolo). isso acontece em todas as camadas
+- multiplexação --> varias camadas se comunicam com uma; 
+- splitting --> uma camada se comunica com várias; ex: usar várias abas para usar a internet, pq a pessoa tem só um ip
+- um para um --> camada se comunica com camada
+- funções das camadas --> física (trata do meio físico (fio de coobre, fibra ótica...), características: define o meio de transmissão, representação de bits, sincronização de bits... mais infoemações no slide. Lida com o fluxo de bits. os protocolos são determinados pelas operadoras(mais informações no slide))
+- camada de enlace --> provê um meio de transmissão confiável, pega as informações da camada física e transforma numa transmissão confiavel. campo de checagem do frame (os dados são enviados e o quadro se auto verifica). protocolos mais usados: ethernet, ppp
+- camada de rede --> prove um canas de comunicação independente do meio. controla as operações da sub rede. o que faz: endereçamento, seleção de qualidade do serviço (se o user pagar mais, os pacotes terão prioridade, apesar da regra fifo (first in first out))
+- se hover dois endereços ip iguais, a placa de rede é desativada automaticamente. 
 
 
 
