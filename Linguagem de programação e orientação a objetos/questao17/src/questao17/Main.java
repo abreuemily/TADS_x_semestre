@@ -13,8 +13,8 @@ public class Main {
 		
 		
 		
-		int quilo = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a quantidade de quilowatts gastos:"));
-		int salario = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o salário mínimo atual:"));
+		double quilo = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe a quantidade de quilowatts gastos:"));
+		double salario = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o salário mínimo atual:"));
 		if (quilo < 0 || salario < 0) {
 			JOptionPane.showMessageDialog(null, "Valores inválidos! (animal)");
 
