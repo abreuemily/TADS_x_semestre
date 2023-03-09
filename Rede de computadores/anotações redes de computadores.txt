@@ -96,6 +96,11 @@ Brasil, 2013. --> referencias da disciplina
 - camada de enlace --> provê um meio de transmissão confiável, pega as informações da camada física e transforma numa transmissão confiavel. campo de checagem do frame (os dados são enviados e o quadro se auto verifica). protocolos mais usados: ethernet, ppp
 - camada de rede --> prove um canas de comunicação independente do meio. controla as operações da sub rede. o que faz: endereçamento, seleção de qualidade do serviço (se o user pagar mais, os pacotes terão prioridade, apesar da regra fifo (first in first out))
 - se hover dois endereços ip iguais, a placa de rede é desativada automaticamente. 
+- camada de transporte garante a comunicação entre o transmissor e o receptor. protocolos: tcp (orientado a conecção, dá garantia), udp (não orientado a conecção. pode ter ou não confirmação, não dá garantia), scpt (junta características dos dois)
+- camada de seção -> lida com a parte de sincronia do dialogo. não ocorre multiplecssação e spliting. 
+- autenticação é feita na camada de seção, para se conectar num site é preciso dos cookies
+- camada de apresentação --> faz transformação de dados como a criptografia. protocolos: ascii, ebcdic...
+- camada de aplicação --> funções especificas de utilização dos sistemas, como aplicação do pop3 por ex protocolos: http, smtp, ftp
 - 
 
 
