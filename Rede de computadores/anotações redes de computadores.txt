@@ -101,8 +101,7 @@ Brasil, 2013. --> referencias da disciplina
 - autenticação é feita na camada de seção, para se conectar num site é preciso dos cookies
 - camada de apresentação --> faz transformação de dados como a criptografia. protocolos: ascii, ebcdic...
 - camada de aplicação --> funções especificas de utilização dos sistemas, como aplicação do pop3 por ex protocolos: http, smtp, ftp
-- 
-
+- nas --> disponibiliza as informaçãoes na rede. armazena hd ou ssd
 
 
 
