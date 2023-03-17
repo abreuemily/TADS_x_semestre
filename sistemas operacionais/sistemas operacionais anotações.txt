@@ -24,5 +24,34 @@ programadores de sistema; responsáveis pela manutenção do sistema operacional
 administrador do sistema, responsável pelo controle da utilização da máquina, seus recursos e softwares, cadastramento de usuários, oferecer ou retirar direitos a determinadas operações, a utilização de recursos (ex. impresssora), etc.
 '''
 - https://pt.slideshare.net/DanielBrando3/resumo-sistemas-operacionais  --> resumo da matéria
-- 
-- 
+
+CONCEITOS DE SO
+- tempo de latencia --> tempo que leva para uma informação ser processada
+- sistema computacional --> humanware, software e hardware
+- hoje em dia há o conceito de ecossistemas computacionais 
+- aplicações sem sistema operacional --> gasto maior de tempo de programação, user se preocupa com detalhes de hardware, aumenta a difeculdade. user faz a aplicação --> rotinas de e/s --> hardware (forte acoplamento (as especificações do hardware não permitem que ele seja modificado))
+- aplicações com sistema operacional --> maior racionalidade, maior portabilidade, maior dedicação aos problems de alto nível. As rotinas de e/s e o hardware são controlados pelo sistema operacional (fraco acoplamento)
+- máquina multinível --> 1º aplicativos (sistemas de persistencia de dados, navegador, front end) 2º programas do sistema (compiladores e linkers, editores, interpretadores de comando (fortemente ligado ao sistema operacional), sistema operacional) 3º hardware (linguagem de máqiuna, micro arquitetura, dispositivos físicos)
+- definição de sistema operacionais --> conjunto de programas interrelacionados que faz o intermedio entre user e hardware e gerencia os recursos
+- objetivos contraditorios --> conveniencia, eficiencia, facilidade de evolução, a melhor escolha sempre depende de alguma coisa
+- o user pode interagir com o so por meio da linguagem de comando (o terminal)
+- multiprogramação (concorrente)--> recursos dinamicamente reassociados entre uma coleção de programas em diferentes estágios
+- monoprogramação (monoprogramação)--> recursos alocados a um unico programa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
