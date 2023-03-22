@@ -1,0 +1,15 @@
+23. Fazer um algoritmo para calcular o volume de uma esfera de raio R.
+Fórmula: Volume = 4/3 * PI * (R3)
+PI = 3,1416
+
+Início
+real: R, vol;
+imprimir("Informe o valor do raio: ");
+ler(R);
+se (R<0)
+  então
+    imprimir("O valor do raio não pode ser negativo");
+  senão
+    vol<--4/3*3,1416*(R**3);
+    imprimir("O volume da esfera é: ", vol);
+Fim    
