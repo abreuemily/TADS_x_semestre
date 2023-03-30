@@ -15,3 +15,6 @@ se (R<0)
 fim_se;    
 Fim  
   https://compassuol.udemy.com/learning-paths/3862282?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email
+- As APIs REST são interfaces de programação comumente usadas para interagir com arquivos no Amazon S3
+- Data lake: repositório centralizado que permite armazenar dados estruturados, semiestruturados e não estruturados em qualquer escala.
+- AWS Lake Formation: serviço que organiza e faz curadoria de dados dentro de data lakes do Amazon S3. Esse serviço garante a segurança e a conformidade de itens dentro do lake, bem como orquestra trabalhos de transformação utilizando o data lake e outros serviços AWS
