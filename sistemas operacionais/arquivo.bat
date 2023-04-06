@@ -23,17 +23,18 @@ goto fim
 net user administrador /active:no > nul
 goto fim
 
-op3
+:op3
 calc
 goto fim
-
-op4
-echo.
-echo Precione Enter para sair :( Volte logo.
-pause > nul
 
 :fim
 echo.
 echo Tudo certo!
 echo Pressione enter para sair :)
 pause > nul
+
+:op4
+echo.
+echo Precione Enter para sair :( Volte logo.
+pause > nul
+
