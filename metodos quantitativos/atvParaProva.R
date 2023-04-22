@@ -1,5 +1,5 @@
-install.packages("dplyr")
-load('resEnergy.Rdata')
+
+
 load("resEnergy.Rdata")
 # 1. inspeção dos dados
 str(resEnergy)
