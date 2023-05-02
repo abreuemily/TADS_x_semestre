@@ -12,7 +12,7 @@ public class contaPoupanca extends ContaBancaria{
 		this.diaRendimento = diaRendimento;
 	}
 	public void calcularNovoSaldo(float a) {
-		setSaldo(getSaldo() * (1+(a/100)));
+		setSaldo(getSaldo() + (getSaldo() * (a/100)));
 		
 	}
 
