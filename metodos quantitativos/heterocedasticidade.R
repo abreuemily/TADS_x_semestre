@@ -21,14 +21,18 @@ library(lmtest)
 bpHet<- bptest(mod)
 bpHet
 
+#identificou a heterocedasticidade
 ### teste de white (1980), usando bptest do pacote lmtest
 bptest(mod,~vendas+I(vendas^2), data=inovacao)
 
 ###erros robustos de white
 #possibilidades type=c('HC0', 'HC1','HC2','HC3','HC4'))
+# HC1 é usado pelo STATA, mas HC3 o mais recomendado
 install.packages("sandwich")
 library(sandwich)
 coeftest(mod,vcov=vcovHC(mod,type="HC1"))
+#não capturou a heterocedasticidade
 
 summary(mod)
 
+coeftest(mod,vcov=vcovHC(mod,type="HC3")) #mais indicado
