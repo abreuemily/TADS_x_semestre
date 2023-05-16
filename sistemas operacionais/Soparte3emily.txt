@@ -1,0 +1,28 @@
+Após várias melhorias sobre o sistema comprado, a Microsoft lançou MS-DOS em 1982 cuja interface era baseada em modo texto, bastante parecida com a utilizada pelo Unix. Na época, esse SO não chamou tanta atenção, pois o Apple Lisa de Steve Jobs já trabalhava com uma interface gráfica. Tomando conhecimento deste problema, Bill Gates fez uma vista a Apple, com o objetivo básico de conhecer a empresa. Ao final da visita, Gates convenceu Jobs a ser incluído no desenvolvimento do Macintosh. O objetivo de Gates era maior que isso: copiar a interface gráfica do Machintosh, e foi exatamente isso que aconteceu. No lançamento do novo PC da Apple, Steve Jobs descobriu que a Microsoft estava lançando máquinas no Japão, cujas interfaces eram muito parecida com a do seu computador. Após a quebra da parceria entre os dois, Gates lançou o Sistema Operacional Windows 1.0 em 1985, batendo de frente com o MAC OS.
+Após problemas de administração, Jobs foi demitido da Apple, o que desestabilizou a
+empresa, retornando somente em 1997. Assim, a Microsoft foi ganhando cada vez mais mercado no mercado, lançando o Windows 2.0 em 1987, trazendo melhorias consideráveis na parte visual e no gerenciamento de memória.
+Windows 3.0 e 3.11 No início dos anos 90, o mercado de sistemas operacionais sofreu novo boom com o lançamento do Windows 3.0 (1990) e Windows 3.1(1992). Na sua versão 3.0, a memória passou a ser gerenciada de maneira muito mais eficiente, incluindo a melhora substancial na interface gráfica. Foi criado um painel de controle e um gerenciador de arquivos organizado, facilitando todo o trabalho do usuário. Um dos principais motivos que contribuíram para seu sucesso foi o fato do sistema já vir instalado de fábrica em um grande número de máquinas.
+O Windows 3.1, incluindo seu service pack 3.11, trouxe melhorias à versão 3.0, como uma interface de rede melhor desenvolvida. Em 2 meses de lançamento, o 3.1 vendeu 3 milhões de cópias. Windows 95, 98 e ME No ano de 1995, foi lançada no mercado a nova versão deste sistema operacional, o Windows 95. Esta versão foi tão importante para informática que acabou definindo o padrão com que o desktop é organizado, o qual ainda é utilizado no Vista. Por exemplo, podemos citar o botão Start, o menu Iniciar, a barra de tarefas e o gerenciador de arquivos Windows Explorer. Após alguns services packs, esta versão passou a suportar a leitura de dispositivos USB, o navegador internet explorer, entre outras funcionalidades.
+Dando continuidade a seu antecessor, a nova versão deste sistema foi lançada no ano de 1998, chamada de Windows 98. Apesar de apresentar melhorias em relação ao 95, o SO era um pouco lento e instável. Tais problemas só foram arrumados com o Windows 98 SE (Second Edition), lançado em 1999, que incluía funções avançadas para compartilhamento de rede, suporte integrado a drivers de DVD-ROM, entre outras tarefas O sucessor, Windows Me, lançado em 2000, foi um dos maiores fracassos na questão de sistema operacional, pois era muita instável. Possuía somente poucas melhoras em relação ao Windows 98 SE. Por isso, logo foi deixado de lado. Todas as versões apresentadas até aqui usavam o MS-DOS como núcleo do sistema, ou seja, o Windows funcionava como uma espécie de ambiente gráfico. Com o passar do tempo, o uso desta arquitetura tornou-se insuportável, visto que o MS-DOS não conseguia dar conta de processar tantas informações, o que ficou evidente no Windows Me. Windows XP e Vista Lançado em 2001, o Windows XP tornou-se um marco na história dos sistemas operacionais, principalmente por trazer muitos recursos totalmente novos. Entre eles é possível citar que o sistema tornou-se muito mais seguro, através da diferenciação de permissões entre administradores e usuários comuns. A estabilidade também é uma de suas fortes características, pois o número de telas azuis diminuíram consideravelmente.
+
+
+
+1982: MS-DOS - a interface era baseada em modo texto, bastante parecida com a utilizada pelo Unix.
+
+1985: Windows 1.0 
+
+1987: Windows 2.0 - trouxe melhorias consideráveis na parte visual e no gerenciamento de memória.
+
+1990: Windows 3.0 - a memória passou a ser gerenciada de maneira muito mais eficiente, incluindo a melhora substancial na interface gráfica. Foi criado um painel de controle e um gerenciador de arquivos organizado, facilitando todo o trabalho do usuário.  o sistema já vinha instalado de fábrica.
+
+1992: Windows 3.1 - interface de rede melhor desenvolvida.
+
+1995: Windows 95 - definiu o padrão com que o desktop é organizado.
+
+1998: Windows 98 - Apesar de apresentar melhorias em relação ao 95, o SO era um pouco lento e instável.
+
+1999: Windows 98 SE - incluía funções avançadas para compartilhamento de rede, suporte integrado a drivers de DVD-ROM, entre outras tarefas
+
+2000: Windows Me - um dos maiores fracassos na questão de sistema operacional, pois era muita instável.
+
+2001: Windows XP - trouxe muitos recursos totalmente novos. Entre eles é possível citar que o sistema tornou-se muito mais seguro, através da diferenciação de permissões entre administradores e usuários comuns. A estabilidade também é uma de suas fortes características, pois o número de telas azuis diminuíram consideravelmente.

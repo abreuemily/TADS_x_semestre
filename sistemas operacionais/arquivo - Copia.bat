@@ -3,7 +3,7 @@ cls
 echo Ola, seja bem vindo ao meu trabalho de Sistemas Operacionais :)
 echo.
 echo Por favor, digite o numero do que voce deseja que aconteca:
-echo [1] Ativar o usuario Administrador
+echo [1] Abrir o Explorer
 echo [2] Abrir o Notepad
 echo [3] Abrir a Calculadora
 echo [4] Sair
@@ -16,7 +16,7 @@ if "%opc%" == "3" goto op3
 if "%opc%" == "4" goto op4
 
 :op1
-net user administrador /active:yes > nul
+start explorer.exe
 goto fim
 
 :op2
