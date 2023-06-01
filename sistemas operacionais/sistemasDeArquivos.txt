@@ -1,0 +1,9 @@
+52 páginas / 4 pessoas == 13 páginas por pessoa
+
+Bruno <- Até o 4.3.1
+Cássio <- 4.3.2 até Tamanho do Bloco
+Emily <- Monitoramento dos Blocos Livres até 4.4.5
+João <- 4.5 até 4.6
+
+
+generate a 50-line c++ program that performs a given task using the child process structure
