@@ -1,0 +1,47 @@
+
+#Função
+def função_exibir():
+   nome=input("Informe seu nome:")
+   return nome
+n=função_exibir()
+print(f'Boa noite, {n}!')
+print()
+print(f'Nova Exibição\nBoa noite, {função_exibir()}!')
+
+*****************************************************************
+#Procedimento
+
+def procedimento_exibir():
+   nome=input("Informe seu nome:")
+   print(f'Boa noite, {nome}!')
+   print()
+procedimento_exibir()
+procedimento_exibir()
+procedimento_exibir()
+
+******************************************************************
+"""
+FAZER UM PROGRAMA EM PYTHON PARA:
+1) Ler, por função, 2 números;
+2) Mostrar os números lidos através de procedimento;
+3) Mostrar, através de procedimento, a soma dos números lidos.
+    
+"""
+#Função LER
+def ler():
+    x=float(input("Digite um número:"))
+    return x
+
+#Procedimento MOSTRAR
+def mostrar(y):
+    print(f'Número:{y}')
+
+#Procedimento SOMA
+def soma(a,b):
+    print(f'Soma entre {a} e {b} é igual a {a+b}')
+
+A=ler()     #Chamada da função LER
+B=ler()     #Chamada da função LER
+mostrar(A)  #Chamada do procedimento MOSTRAR
+mostrar(B)  #Chamada do procedimento MOSTRAR
+soma(A,B)   #Chamada do procedimento SOMA

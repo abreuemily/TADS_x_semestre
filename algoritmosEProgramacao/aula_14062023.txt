@@ -1,0 +1,251 @@
+# -*- coding: utf-8 -*-
+"""
+FAZER UM PROGRAMA EM PYTHON PARA:
+1) Ler, por função, 2 números;
+2) Mostrar os números lidos através de procedimento;
+3) Mostrar, através de procedimento, a soma dos números lidos.
+    
+"""
+#Função LER
+def ler():
+    x=float(input("Digite um número:"))
+    return x
+
+#Procedimento MOSTRAR
+def mostrar(y):
+    print(f'Número:{y}')
+
+#Procedimento SOMA
+def soma(a,b):
+    print(f'Soma entre {a} e {b} é igual a {a+b}')
+
+A=ler()     #Chamada da função LER
+B=ler()     #Chamada da função LER
+mostrar(A)  #Chamada do procedimento MOSTRAR
+mostrar(B)  #Chamada do procedimento MOSTRAR
+soma(A,B)   #Chamada do procedimento SOMA
+
+*************************************************
+arquivo exibicao.py
+
+# -*- coding: utf-8 -*-
+"""
+PROCEDIMENTO EXIBIÇÃO
+
+"""
+#Procedimento EXIBIR
+def exibir(y):
+    print(f'Número:{y}')
+************************************************
+arquivo somatoria.py
+# -*- coding: utf-8 -*-
+"""
+PROCEDIMENTO SOMA
+
+"""
+#Procedimento SOMA
+def soma(a,b):
+    print(f'Soma entre {a} e {b} é igual a {a+b}')
+********************************************************
+arquivo ler.py
+# -*- coding: utf-8 -*-
+"""
+Função LER
+"""
+#Função LER
+def ler():
+    x=float(input("Digite um número:"))
+    return x
+***********************************************************
+arquivo principal.py
+# -*- coding: utf-8 -*-
+"""
+PROGRAMA PRINCIPAL
+
+"""
+from leitura import *
+from exibicao import *
+from somatoria import *
+
+A=ler()     #Chamada da função LER
+B=ler()     #Chamada da função LER
+exibir(A)  #Chamada do procedimento MOSTRAR
+exibir(B)  #Chamada do procedimento MOSTRAR
+soma(A,B)   #Chamada do procedimento SOMA
+************************************************************
+# -*- coding: utf-8 -*-
+"""
+FAZER UM PROGRAMA EM PYTHON PARA:
+1) ler, por função, 2 números reais;
+2) Exibir, através de procedimento, a soma dos valores lidos;
+3) Exibir, através de função, a soma dos valores lidos;
+    
+"""
+
+#Programa 1 - 14/06/2023
+#Função leitura
+def ler():
+    x=float(input("Digite um número:"))
+    return x
+
+#Procedimento SOMA
+def soma(a,b):
+    print(f'A soma entre {a} e {b} é {a+b}')
+
+#Função SOMA
+def fun_soma(a,b):
+    return a+b
+
+    # x=a+b
+    #return x
+
+#Entrada de Dados
+A=ler()
+B=ler()
+#Chamar o procedimento SOMA
+soma(A,B)
+#Chamar a função SOMA
+print(f'Soma = {fun_soma(A,B)}')  
+
+# y=fun_soma(A,B)
+# print(f'Soma = {y}')  
+
+
+********************************************************
+# -*- coding: utf-8 -*-
+"""
+SOMAR 10 NÚMEROS
+
+"""
+#Programa 2 - 14/06/2023
+#Função leitura
+def ler():
+    x=float(input("Digite um número:"))
+    return x
+
+#Procedimento EXIBIR
+def exibir(y):
+    print(f'Número:{y}')
+
+s=0
+#Usando laço PARA
+for i in range(0,10):
+    x=ler()
+    s+=x
+    exibir(x)
+print(f'Soma = {s}')
+
+*********************************************
+# -*- coding: utf-8 -*-
+"""
+Faça uma função que recebe por parâmetro o raio de uma esfera e calcula o seu volume.
+(v = 4/3.PI.R3).
+
+"""
+#Função para Calcular o Volume da Esfera
+def volume(r):
+    PI=3.1416
+    v=4/3*PI*r*r*r
+    return v
+
+#PRINCIPAL
+raio=float(input('Informe o valor do raio:'))
+while raio<=0:
+    print("Valor inválido!")
+    raio=float(input('Informe o valor do raio:'))
+print(f'O volume da esfera de raio {raio} é {volume(raio)}') 
+
+*******************************************************************
+# -*- coding: utf-8 -*-
+"""
+2. Escreva uma função que recebe as 3 notas de um 
+aluno por parâmetro e uma letra. 
+Se a letra for A o procedimento calcula a média aritmética 
+das notas do aluno, se for P, a sua média ponderada 
+(pesos: 5, 3 e 2) e se for H, a sua média harmônica. 
+A média calculada também deve retornar por parâmetro.
+
+"""
+def nota():
+    n=float(input("Nota:"))
+    while n<0 or n>10:
+        print("Nota inválida!")
+        n=float(input("Nota:"))
+    return n
+def media(a1,a2,a3,l):
+    if l=='A':
+        m=(a1+a2+a3)/3
+    elif l=='P':
+        m=(a1*5+a2*3+a3*2)/10
+    else:
+        m=3/(1/a1+1/a2+1/a3)
+    return m
+
+#PRINCIPAL
+#Entrada das notas
+n1=nota()
+n2=nota()
+n3=nota()
+print("Tipos de Média")
+print("A - Aritmética")
+print("P - Ponderada")
+print("H - Harmônica")
+letra=input("Informe tipo média:")
+while letra!='A' and letra!='P' and letra!='H':
+    print("Opção inválida!")
+    letra=input("Informe tipo média:")
+print(f"Média é igual a {media(n1,n2,n3,letra)}")
+
+******************************************************************
+MÉDIA COM REPETIÇÃO
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 14 20:38:49 2023
+
+@author: ALN
+"""
+import sys
+def nota():
+    n=float(input("Nota:"))
+    while n<0 or n>10:
+        print("Nota inválida!")
+        n=float(input("Nota:"))
+    return n
+def media(a1,a2,a3,l):
+    if l=='A':
+        m=(a1+a2+a3)/3
+    elif l=='P':
+        m=(a1*5+a2*3+a3*2)/10
+    elif l=='H':
+        m=3/(1/a1+1/a2+1/a3)
+    else:
+        m=0
+    return m
+
+#PRINCIPAL
+#Entrada das notas
+n1=nota()
+n2=nota()
+n3=nota()
+z=1
+while (z!=0):
+    print("Tipos de Média")
+    print("A - Aritmética")
+    print("P - Ponderada")
+    print("H - Harmônica")
+    print("S - Sair")
+    letra=input("Informe tipo média ou S para sair:")
+    while letra!='A' and letra!='P' and letra!='H' and letra!='S':
+        print("Opção inválida!")
+        letra=input("Informe tipo média ou S para sair:")
+    z=media(n1,n2,n3,letra)
+    if z!=0:
+        print(f"Média é igual a {z}")
+    else:
+        sys.exit()
+        
+
+
+
+
