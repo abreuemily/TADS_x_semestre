@@ -39,9 +39,8 @@ se_corrigido
 
 #5 - Qual seriam os valores das despesas com educação per capita (ee) em países de Produto Interno 
 #Bruto per capita (gdp) de 240, 250 e 260 conforme o modelo estimado?
-a<-0.066891*240
-a
-b<-0.066891*250
-b
-c<-0.066891*260
-c
+
+
+v<-c(240, 250, 260)
+vee<-predict(modelo,newdata=data.frame(gdp=v))
+vee
