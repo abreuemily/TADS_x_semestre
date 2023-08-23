@@ -1,0 +1,5 @@
+Big O
+- modo de classificar o algoritmo pelo tempo de execução ou espaço ocupado conforme o nosso input aumenta. existem notações que classificam a velocidade de transferência de um dado. Ex: 
+N² -> se temos 10^9 de pixels de uma imagem para enviar, então demorará 10²^9, ou seja, 10^18 nanosegundos, o que é igual a 31.2 ano 
+N log2 N -> na mesma situation do N², demorará 30*10^9 nanosegundos, ou seja, 30 segundos
+logo, percebemos que o segundo software é mais eficiente.
