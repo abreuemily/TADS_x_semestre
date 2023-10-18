@@ -1,0 +1,368 @@
+1-A comunicação entre o cliente (geralmente um navegador web) e o servidor na arquitetura da Web é realizada usando o protocolo HTTP (Hypertext Transfer Protocol). O HTTP é um protocolo de comunicação padrão que define a maneira como as mensagens são formatadas e transmitidas entre o cliente e o servidor.
+
+Existem duas versões principais do protocolo HTTP em uso: HTTP/1.1 e HTTP/2.0 (e versões mais recentes, como HTTP/3.0). Cada uma delas tem suas próprias melhorias e otimizações em relação à versão anterior, visando tornar a comunicação entre o cliente e o servidor mais eficiente e rápida.
+
+2-A tag HTML usada para embutir outro documento dentro da página HTML corrente é a <iframe>. O elemento <iframe> permite incorporar uma janela (frame) dentro de uma página HTML, e nessa janela é possível carregar outro documento HTML ou conteúdo de outras fontes, como vídeos, mapas, entre outros. É amplamente utilizada para integrar conteúdo de terceiros em um site.
+
+4-A primeira instrução que o programador deve inserir em uma página HTML é o tipo de declaração do documento, conhecida como a "Declaração de Tipo de Documento" ou "Document Type Declaration" em inglês. Ela informa ao navegador qual é a especificação do HTML que está sendo usada no documento.
+
+Para documentos HTML5, a declaração é a seguinte: <!DOCTYPE html>
+Essa declaração é suficiente para indicar que o documento está usando a especificação HTML5. É seguida pela estrutura básica do documento HTML, que começa com a tag <html>.
+
+5-As tags `<div>` e `<span>` são elementos HTML que são usados para agrupar e aplicar estilos a partes específicas de um documento web, mas eles têm propósitos e comportamentos ligeiramente diferentes:
+
+1. **`<div>`**:
+
+   - **"Divisão"**: O nome "div" é uma abreviação de "division", o que indica que é usado para dividir o conteúdo em seções distintas.
+   - **Bloqueio**: Por padrão, o elemento `<div>` é um elemento de bloco. Isso significa que ele ocupa toda a largura disponível e empurra elementos subsequentes para baixo na página.
+   - **Agrupa elementos**: O `<div>` é frequentemente usado para agrupar um conjunto de elementos HTML (como textos, imagens, formulários, etc.) em uma única unidade. É muito usado para aplicar estilos ou definir comportamentos a um grupo de elementos.
+   - **Pode conter outros elementos HTML**: Pode conter praticamente qualquer outro elemento HTML, incluindo outros `<div>`.
+
+   Exemplo:
+
+   ```html
+   <div>
+       <p>Este é um parágrafo dentro de uma divisão.</p>
+       <img src="imagem.jpg" alt="Imagem">
+   </div>
+   ```
+
+2. **`<span>`**:
+
+   - **"Espaço":** O nome "span" não tem um significado específico, mas pode ser interpretado como "espaço" ou "intervalo", indicando que é usado para envolver um pedaço de texto ou conteúdo em linha.
+   - **Em linha:** O elemento `<span>` é um elemento em linha. Isso significa que ele não quebra a linha e ocupa apenas o espaço necessário para o conteúdo dentro dele.
+   - **Usado para aplicar estilos ou scripts a uma parte específica de texto**: O `<span>` é frequentemente usado quando você deseja aplicar estilos ou scripts a uma parte específica de texto dentro de um elemento maior (como um parágrafo).
+   - **Não deve conter elementos de bloco:** O `<span>` não deve conter outros elementos de bloco, como parágrafos ou divisões.
+
+   Exemplo:
+
+   ```html
+   <p>Este é um <span style="color: red;">texto em vermelho</span> dentro de um parágrafo.</p>
+   ```
+
+Em resumo, `<div>` é usado para agrupar e aplicar estilos a conjuntos de elementos, muitas vezes em blocos, enquanto `<span>` é usado para aplicar estilos ou scripts a partes específicas de texto ou conteúdo dentro de um elemento, muitas vezes em linha.
+
+11-A tag `<meta>` em HTML é usada para fornecer metadados sobre o documento, como a codificação de caracteres, a descrição da página, autor, entre outros. Para tornar uma página web responsiva, você pode usar a meta tag de viewport.
+
+A meta tag de viewport controla a maneira como o conteúdo é exibido em dispositivos móveis. Ela permite que os desenvolvedores controlem a largura e a escala inicial da página em dispositivos móveis. Através do atributo "name", a meta tag para viewport é especificada da seguinte maneira:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+Explicação dos atributos:
+
+- **`name="viewport"`**: Indica que estamos configurando as propriedades de visualização da página.
+- **`content="width=device-width, initial-scale=1"`**:
+  - `width=device-width`: Faz com que o layout da página se ajuste à largura do dispositivo.
+  - `initial-scale=1`: Define o nível inicial de zoom quando a página é carregada.
+
+Essa tag ajuda a garantir que o conteúdo seja exibido corretamente em dispositivos móveis e tablets, adaptando-se à largura do dispositivo e permitindo a experiência de navegação adequada em telas menores.
+
+Portanto, ao adicionar essa meta tag à seção `<head>` de uma página HTML, você estará contribuindo para uma experiência mais responsiva para os usuários que acessam o site em dispositivos móveis.
+
+13-Para aplicar a formatação diretamente na tag HTML usando o atributo `style`, você pode fazer o seguinte:
+
+```html
+<h2 style="color: green;">Calculadora Soma</h2>
+```
+
+Isso irá definir a cor do texto do elemento `<h2>` como verde. O atributo `style` é usado para aplicar estilos diretamente no elemento, e o valor `color: green;` especifica que a cor do texto será verde.
+
+15-Quando você está enviando um arquivo através de um formulário HTML, deve usar o método HTTP `POST`.
+
+Portanto, o formulário HTML deve ter a seguinte estrutura:
+
+```html
+<form action="url_do_destino" method="post" enctype="multipart/form-data">
+  <input name="myIMG" type="file">
+  <input type="submit" value="Enviar">
+</form>
+```
+
+Aqui está uma explicação dos atributos do formulário:
+
+- **`action`**: Especifica a URL do servidor que receberá os dados do formulário.
+- **`method`**: Define o método HTTP a ser usado para enviar os dados. Neste caso, deve ser `POST` para enviar arquivos.
+- **`enctype`**: Define o tipo de codificação a ser usada para os dados do formulário. Para enviar arquivos, você deve usar `enctype="multipart/form-data"`. Esta é a codificação adequada para uploads de arquivos.
+
+Lembre-se de substituir `"url_do_destino"` pela URL do servidor que irá processar o envio do arquivo.
+
+20-Usando a biblioteca jQuery, você pode realizar uma tarefa semelhante usando o seletor de classe. O equivalente ao código JavaScript `document.getElementsByClassName("classCSS")` em jQuery seria:
+
+```javascript
+$(".classCSS")
+```
+
+Esta linha de código jQuery selecionará todos os elementos com a classe CSS "classCSS" e retornará um objeto jQuery que representa esses elementos.
+
+Por exemplo, se você quiser aplicar uma ação a todos os elementos com essa classe, você poderia fazer algo como:
+
+```javascript
+$(".classCSS").css("propriedade", "valor");
+```
+
+Esta linha de código jQuery aplicará a propriedade CSS "propriedade" com o valor "valor" a todos os elementos com a classe "classCSS".
+
+24-Para começar a usar o Bootstrap em uma página HTML, você precisa importar os seguintes arquivos na ordem correta:
+
+1. **Bootstrap CSS**:
+   - O primeiro arquivo a ser importado é o CSS do Bootstrap, que fornece os estilos básicos para o framework.
+   
+   ```html
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   ```
+
+2. **Bootstrap JS e Dependências**:
+   - Em seguida, importe o jQuery (requerido pelo Bootstrap para algumas funcionalidades) e o JavaScript do Bootstrap.
+   
+   ```html
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   ```
+
+   Certifique-se de que o jQuery seja importado antes do Bootstrap, e que o Popper.js seja importado antes do Bootstrap JavaScript. Isso é importante para garantir a funcionalidade correta.
+
+3. **Opcional: Bootstrap Tema (opcional)**:
+   - Se desejar, você pode importar um tema personalizado do Bootstrap após os arquivos principais do Bootstrap. Isso pode ser feito com um arquivo CSS adicional.
+
+   ```html
+   <link rel="stylesheet" href="caminho/para/seu/tema.css">
+   ```
+
+Lembrando que os links fornecidos são exemplos com base na versão 4.3.1 do Bootstrap. Se estiver utilizando uma versão diferente, é recomendado usar a URL correta para essa versão.
+
+25-O Bootstrap fornece classes predefinidas para ajudar a definir uma `<div>` como um contêiner. Existem duas principais classes utilizadas para esse fim:
+
+1. **`.container`**:
+   - Esta classe cria um contêiner fixo com largura máxima responsiva. Ou seja, o conteúdo dentro do contêiner irá se ajustar automaticamente para diferentes tamanhos de tela, mas terá uma largura máxima fixa.
+
+2. **`.container-fluid`**:
+   - Esta classe cria um contêiner fluído que se estende por toda a largura do viewport. O conteúdo dentro do contêiner fluído se ajustará conforme a largura da tela do dispositivo.
+
+Essas classes são fundamentais para a estruturação de layouts responsivos em Bootstrap. A escolha entre `.container` e `.container-fluid` dependerá do design específico que você está buscando para o seu site. A maioria dos layouts utiliza uma combinação dessas classes para obter o resultado desejado.
+
+26-Para atingir o layout desejado, onde a divisão da esquerda ocupa 25% da largura da linha e a divisão da direita ocupa 75%, você deve usar as classes de largura do Bootstrap para dispositivos pequenos.
+
+A classe que define a largura de uma coluna em Bootstrap para dispositivos pequenos (de 576 a 767 pixels) é `col-sm-`. 
+
+No seu caso, para que a divisão da esquerda ocupe 25% e a divisão da direita ocupe 75%, você deve usar as seguintes classes:
+
+```html
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-sm-3 bg-success">
+
+      INSTITUTO FEDERAL DO PARÁ - IFPA
+
+    </div>
+
+    <div class="col-sm-9 bg-warning">
+
+      CURSO TADS
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+Explicação:
+
+- `col-sm-3`: Esta classe define que a divisão da esquerda deve ocupar 25% da largura da linha em dispositivos pequenos.
+- `col-sm-9`: Esta classe define que a divisão da direita deve ocupar 75% da largura da linha em dispositivos pequenos.
+
+Com essas classes, você alcançará o layout desejado para dispositivos pequenos.
+
+29-Para realizar essa operação, você pode fazer o seguinte em JavaScript:
+
+```javascript
+// Definindo as variáveis x e y
+var x = 5;
+var y = 10;
+
+// Calculando a soma
+var soma = x + y;
+
+// Atualizando o conteúdo do elemento HTML com ID "demo"
+document.getElementById("demo").innerHTML = soma;
+```
+
+Supondo que você tenha um elemento HTML com o ID "demo" (por exemplo, um `<div>`), o resultado da soma de 5 + 10 será exibido nesse elemento. Certifique-se de que o elemento com o ID "demo" exista na sua página HTML.
+
+31- Claro, você pode fazer isso da seguinte forma em JavaScript:
+
+```javascript
+// Definindo as variáveis x e y
+var x = 5;
+var y = 10;
+
+// Calculando a soma
+var z = x + y;
+
+// Exibindo o resultado em uma caixa de alerta
+alert(z);
+```
+
+Ao executar este código, você verá uma caixa de alerta exibindo o resultado da soma de `x` e `y`, que é 15.
+
+31-Você pode declarar três variáveis em JavaScript em uma única linha usando a palavra-chave `var` separada por vírgulas. Ficaria assim:
+
+```javascript
+var firstName = "John", lastName = "Doe", age = 35;
+```
+
+Nesta linha, você está declarando e inicializando três variáveis: `firstName`, `lastName` e `age`, com os valores correspondentes.
+
+32- Para resultar em `x` com o valor 15, equivalente à sentença `x = x + y`, você pode usar o operador de atribuição aditiva `+=`. Ficaria assim:
+
+```javascript
+x += y;
+```
+
+Isso é o mesmo que `x = x + y`, onde `x` é incrementado pelo valor de `y`. Portanto, se `x` for inicializado com um valor de 5 e `y` com um valor de 10, a operação `x += y;` irá resultar em `x` com o valor de 15.
+
+34- Em JavaScript, as variáveis `length`, `lastName` e `nome` têm os seguintes tipos de dados:
+
+1. `length`: É do tipo `number` (número), pois armazena um valor numérico.
+
+2. `lastName`: É do tipo `string` (sequência de caracteres), pois armazena texto.
+
+3. `nome`: É do tipo `object` (objeto), pois armazena um objeto com duas propriedades: `firstName` e `lastName`. Cada uma dessas propriedades é uma string.
+
+35- Você pode criar a função "myFunction" em JavaScript da seguinte maneira:
+
+```javascript
+function myFunction() {
+  alert("Alo, Alo!");
+}
+```
+36-Você pode fazer isso da seguinte maneira em JavaScript:
+
+```javascript
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Olá";
+}
+```
+
+Neste caso, a função `myFunction` seleciona um elemento HTML com o ID "demo" e define o conteúdo interno (innerHTML) para "Olá".
+
+Sim, o código que você forneceu funciona perfeitamente! Vou explicar o que está acontecendo:
+
+```javascript
+function myFunction() {
+  return "Olá";
+}
+```
+
+Aqui você está criando uma função chamada `myFunction` que simplesmente retorna a string "Olá" quando é chamada.
+
+```javascript
+document.getElementById("demo").innerHTML = myFunction();
+```
+
+Aqui você está pegando o elemento HTML com o ID "demo" e atualizando o seu conteúdo interno (`innerHTML`) com o resultado da chamada da função `myFunction()`. Como a função retorna "Olá", isso resultará em "Olá" sendo exibido no elemento com ID "demo".
+
+Ambas as abordagens são corretas e dependem do que você precisa fazer em um determinado contexto. A primeira abordagem (com `alert`) exibe uma caixa de alerta com a mensagem, enquanto a segunda abordagem atualiza o conteúdo de um elemento HTML. Ambas fazem parte das maneiras comuns de interagir com o DOM em JavaScript.
+
+39- Para criar o objeto `pessoa` com as propriedades `nome` e `idade`, você pode fazer o seguinte em JavaScript:
+
+```javascript
+const pessoa = {
+  nome: "John",
+  idade: 50
+};
+```
+
+40-Você pode utilizar o objeto `pessoa` que você definiu anteriormente para criar um alerta com a mensagem desejada. Aqui está o código:
+
+```javascript
+const pessoa = {
+  nome: "John",
+  idade: 50
+};
+
+alert(pessoa.nome + " tem " + pessoa.idade);
+```
+
+41-O resultado impresso ao executar o programa será:
+
+```
+8
+```
+
+Explicação:
+
+1. `let valor1 = 5;` - Aqui, `valor1` é declarada como uma variável com o valor inicial de 5.
+
+2. `const valor2 = 3;` - `valor2` é declarada como uma constante (ou seja, seu valor não pode ser alterado após a inicialização) com o valor de 3.
+
+3. `valor1 += valor2;` - Esta linha significa "adicionar o valor de `valor2` a `valor1` e armazenar o resultado de volta em `valor1`". Portanto, `valor1` agora é 8 (5 + 3).
+
+4. `console.log(valor1);` - O valor de `valor1`, que agora é 8, é impresso no console.
+
+42- No bloco de código abaixo, qual será o valor mostrado no console,
+ após o término da estrutura de repetição,
+ caso a função soma_elementos recebesse o parâmetro [ 1, 2, 3, 4, 5 ]?
+
+
+
+
+function soma_elementos(list) {
+
+  let total = 0;
+
+  for (let i = 1; i < list.length; i++) {
+
+     total += list[i];
+
+  }
+
+  console.log(total)
+
+}
+
+O valor mostrado no console, após o término da estrutura de repetição, será `14`.
+
+Explicação:
+
+A função `soma_elementos` recebe uma lista de números como parâmetro. No loop `for`, a iteração começa com `i` igual a 1 (não a 0), e percorre a lista até o último elemento (`list.length - 1`).
+
+Dentro do loop, `total` é atualizado somando-se o elemento na posição `i` da lista.
+
+No caso da chamada `soma_elementos([1, 2, 3, 4, 5])`, a soma será:
+
+```
+total = 2 + 3 + 4 + 5 = 14
+```
+
+Portanto, o valor mostrado no console será `14`.
+
+47- O comando jQuery para selecionar e esconder todos os elementos com a classe "escondido" de uma página é o seguinte:
+
+```javascript
+$(".escondido").hide();
+```
+
+Este comando utiliza a função `hide()` do jQuery para ocultar todos os elementos que têm a classe "escondido". Lembre-se de que este comando só funcionará se você tiver incluído a biblioteca jQuery em sua página HTML.
+
+48- O código fornecido irá imprimir "Caelum" no console do navegador.
+
+Aqui está a explicação passo a passo:
+
+1. `var empresa = "Caelum"`: Aqui, você está criando uma variável chamada `empresa` e atribuindo o valor "Caelum" a ela.
+
+2. `empresa.replace("lum","tano")`: A função `replace` é usada para substituir parte de uma string por outra. No entanto, esta linha não está afetando a variável `empresa`. A função `replace` retorna uma nova string, mas não está sendo armazenada em nenhum lugar.
+
+3. `console.log(empresa)`: Esta linha imprime o valor atual da variável `empresa` no console do navegador. Como a variável `empresa` não foi modificada pelo `replace`, ela ainda contém o valor original "Caelum".
+
+Portanto, o resultado impresso no console será:
+
+```
+Caelum
+```
+

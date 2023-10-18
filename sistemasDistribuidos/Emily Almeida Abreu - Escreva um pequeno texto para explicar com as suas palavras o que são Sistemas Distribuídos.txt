@@ -1,0 +1,1 @@
+﻿Conjunto de softwares que trabalham simultaneamente em conjuntos de hardwares que têm um objetivo em comum. Assim, é possível aumentar a capacidade computacional e evitar gargalos, tornando o sistema mais robusto.

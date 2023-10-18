@@ -1,0 +1,7 @@
+- o que é sistemas distribuídos (sd): coleção de computadores que aparentam ser um só, dividindo processos entre si
+
+- middleware: camada que se encontra entre o sistema operacional e a camada de aplicação. software que conecta softwares diferentes que se encontram num conjunto de máquinas. assim, tem-se uma interface padrão, facilitando o manuseio dos softwares
+
+- ex de sistema distribuído: amazon, google, yahoo...
+
+- objetivos de um sd: fazer o link entre users e recursos, transparencia (deseja-se que o sistema seja visto como único. iludir positivamente o user (oculta diversos acontecimentos complexos de mais para um leigo)), flexibilidade, escalabilidade (quão facil um sistema cresce ou diminui (pode ser de tamanho, geográfica ou administrativa))
