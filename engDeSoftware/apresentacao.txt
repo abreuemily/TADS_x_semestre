@@ -1,0 +1,61 @@
+2.1. CASCATA
+Processos de software estabelecem para os membros da equipe de projeto uma diretriz de o que deve ser feito para atender aos objetivos do software. O processo Cascata tem um conjunto de fases, em sequência, nas quais o trabalho anterior deve estar finalizado, verificado e aprovado antes de se iniciar a próxima fase. As principais características do processo Cascata são:
+-As atividades de especificação, codificação e testes seguem uma 
+disciplina.
+-Uma atividade não é iniciada sem que a anterior tenha sido encerrada e 
+aprovada.
+-Há uma sequência rígida de atividades
+-O usuário/cliente é envolvido somente no início e no fim do processo.
+A seguir, são descritas as atividades do processo Cascata.
+A atividade de Engenharia de Sistemas tem por objetivo entender as necessidades de negócio do cliente e estabelecer requisitos do ponto de vista sistêmico até definir o que será desenvolvido em software.
+A atividade Análise tem por objetivo entender os requisitos do sistema 
+e detalhar os requisitos do software.
+Na atividade de Projeto procura-se definir a estrutura de dados, a arquitetura do software, detalhes procedimentais e as interfaces.
+A atividade de Codificação tem por objetivo traduzir as especificações de software em códigos que sejam compreendidos por um sistema computacional.
+Na atividade de Teste busca-se verificar os aspectos estruturais e lógicos do software, bem como os seus aspectos sistêmicos, com o intuito descobrir defeitos no software.
+Na atividade de Manutenção pretende-se realizar mudanças no software devido a defeitos encontrados durante a sua operação, novas necessidades de negócio, atualização de plataforma computacional e necessidade de mudança preventiva
+Uma das críticas recorrentes é que este processo não é realista, dado que o levantamento de requisitos não é completo em muitos projetos e que a participação do usuário/cliente fica limitada ao início e ao fim do processo.
+Entretanto, o processo Cascata tem como pontos fortes a produção de documentação intermediária em cada fase e a sua aderência a outros modelos de processo de engenharia
+
+2.2. EVOLUTIVO
+Para minimizar os pontos fracos do processo Cascata, surgiram os processos do tipo Evolutivo, que permitem que se trabalhe com um subconjunto de requisitos do produto completo os quais são incrementados, gradualmente, e entregues aos clientes. Neste processo, a complexidade do software pode ser mais bem administrada, minimizando-se os riscos.
+Enquanto o processo Cascata é focado na entrega de um sistema completo no fim do seu processo, os processos Evolutivos são iterativos: o software é desenvolvido evolutivamente em direção ao produto final cada vez mais completo.
+As principais características do processo Espiral são:
+-O planejamento associado com a engenharia, ou seja, disciplinas de gerenciamento do projeto estão integradas com as de engenharia
+-A disciplina de análise de risco diminui os riscos de desenvolvimento do software
+-Há o envolvimento do cliente em cada iteração de maneira ativa no desenvolvimento do software
+O processo Espiral é dividido em uma série de atividades, chamadas regiões de tarefas. Tipicamente, existem entre 3 e 6 regiões: Comunicação do Cliente, Planejamento, Análise de Risco, Engenharia, Construção e Entrega, Avaliação do Cliente.
+O processo Espiral é uma abordagem mais realística para o desenvolvimento de sistemas e softwares de grande porte. Devido à sua característica progressiva, o desenvolvedor e o cliente compreendem e reagem melhor aos riscos em cada nível evolucionário. 
+
+2.3. MODELO V
+O Modelo V é um processo para o desenvolvimento de sistemas, inspirado no processo Cascata.  No Modelo V, o lado esquerdo dá ênfase à decomposição de requisitos e o lado direito à integração do sistema.
+As principais características do Modelo V são:
+-Divisão entre atividades de desenvolvimento e de verificação e validação
+- Clareza nos objetivos de verificação e validação
+-Melhor planejamento dos testes
+Uma vantagem do Modelo V é que, se alguns problemas forem detectados durante a verificação e validação, as especificações correspondentes devem ser corrigidas antes de se realizar os testes de nível mais alto.
+
+2.4. PROCESSO UNIFICADO
+ o Processo Unificado destaca as fases que correspondem à parte dinâmica do processo e os fluxos de trabalho que correspondem às disciplinas do desenvolvimento de software.
+As suas principais características do processo UP são:
+-É estruturado em duas dimensões: fases e fluxos de trabalho (workflows)
+- É dirigido pelos Casos de Uso
+-É centrado na arquitetura
+-O produto é desenvolvido de forma iterativa (iterações) e incremental.
+As fases são: Concepção, Elaboração, Construção, Transição
+Uma das vantagens do processo unificado é a desvinculação das fases com os fluxos de trabalho que podem ser ativados em todos os estágios do processo. No entanto, o processo unificado não é adequado para todos os tipos de desenvolvimento de software
+
+2.5. EXTREME PROGRAMMING
+O extreme programming surgiu como uma alternativa para os processos ditos pesados (tradicionais), que não se adaptam rapidamente às mudanças de negócio. O XP não é adequado para sistemas complexos de grande porte ou críticos, sendo mais indicado para o desenvolvimento de aplicações de pequeno porte, por exemplo, softwares para venda de produtos.
+O XP tem como base o desenvolvimento iterativo e o grande envolvimento do cliente. As suas principais características são:
+-Planejamento incremental.
+- Pequenos entregáveis
+-Projeto simples
+-Desenvolvimento de testes antes do código
+-Refatoração (refactoring) frequente do código
+-Programação em pares.
+- Propriedade coletiva do código
+-Integração contínua do sistema.
+-Ritmo sustentável de trabalho
+- Cliente no local em tempo integral
+ O XP não é adequado para sistemas complexos de grande porte ou críticos, sendo mais indicado para o desenvolvimento de aplicações de pequeno porte, por exemplo, softwares para venda de produtos.
