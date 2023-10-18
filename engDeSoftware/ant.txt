@@ -1,3 +1,4 @@
+Processos e modelos de processo de software
 - ciclo de vida de um software: concebido, desenvolvido, entra em operação, sofre manutenção, entra em desuso
 - como desenvolver o software segundo pressman: compreenda o problema, planeje a solução, execute o plano, examine o resultado. para cada fase, se faz uma série de perguntas importantes que ajudarão a chegar nos melhores resultados
 - acima de tudo, é preciso ter bom senso
@@ -9,3 +10,8 @@
 - modelos de processo: 
   - cascata: um estágio não deve ser iniciado sem terminar o anterior. cada estágio alimenta o proximo com informaçãoes. estágios: definição de requisitos, projeto de sistemas e de software, implementação e teste de unidades, integração e teste de sistemas, operação e manutenção
   - incremental: os estágios são repetidos n vezes para incrementação e  manutenções. estágios: comunicação, planejamento, modelagem, construção, implantação.
+  - prototipação: construção de uma representação do produto pra depois desenvolver. estágios: comunicação, projeto rápido, modelagem projeto rápido, construção do protótipo, implantação, entrega e feedback. o processo se repete até todas as necessedades serem atendidas, daí depois vai ser implementado o sistema.
+  - modelo espiral: acumula a iteração da prototipação e os aspectos sistematicos do cascata. O cliente decide quantas iterações vão acontecer. é uma abordagem realista para desenvolvimento em larga escala.
+
+análise de requisitos
+- requisitos não funcionais: restrições a serem obedecidas em relação a  portabilidade, usabilidade...
