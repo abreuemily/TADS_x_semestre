@@ -1,0 +1,11 @@
+- ciclo de vida de um software: concebido, desenvolvido, entra em operação, sofre manutenção, entra em desuso
+- como desenvolver o software segundo pressman: compreenda o problema, planeje a solução, execute o plano, examine o resultado. para cada fase, se faz uma série de perguntas importantes que ajudarão a chegar nos melhores resultados
+- acima de tudo, é preciso ter bom senso
+- todo processo de criar um software possui genericamente tres fases macros: definição, desenvolvimento e manutenção
+- definição: o que deve ser feito?
+- definição: analise do sistema, planejamento do projeto, analise de requisitos. concentra a maior parte do esforço do analista de sistemas
+- desenvolvimento: como fazer? projeto do software, codificação, realização de testeS
+- manutenção: quais mudanças necessárias? corretiva, adaptativa, preventiva, perfectiva
+- modelos de processo: 
+  - cascata: um estágio não deve ser iniciado sem terminar o anterior. cada estágio alimenta o proximo com informaçãoes. estágios: definição de requisitos, projeto de sistemas e de software, implementação e teste de unidades, integração e teste de sistemas, operação e manutenção
+  - incremental: os estágios são repetidos n vezes para incrementação e  manutenções. estágios: comunicação, planejamento, modelagem, construção, implantação.
