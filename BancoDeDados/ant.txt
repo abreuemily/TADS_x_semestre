@@ -1,0 +1,506 @@
+O PostgreSQL (também conhecido como Postgres) é um sistema de gerenciamento de banco de dados relacional de código aberto, conhecido por sua robustez, escalabilidade e capacidade de lidar com grandes volumes de dados. Sua arquitetura é projetada para oferecer alta performance e confiabilidade. Vamos explorar os principais componentes da arquitetura do PostgreSQL:
+
+1. **Processos do PostgreSQL**:
+
+   - **Postmaster**: É o processo principal que coordena a interação entre os clientes e o servidor de banco de dados. Ele gerencia a criação de novos processos para lidar com as conexões dos clientes.
+
+   - **Processos de Backend**: Cada conexão de cliente é atendida por um processo de backend dedicado. Esses processos executam as consultas e transações solicitadas pelos clientes.
+
+2. **Sistema de Armazenamento**:
+
+   - **Arquivos de Dados**: O PostgreSQL armazena dados em arquivos no sistema de arquivos. Existem diferentes tipos de arquivos, como os de dados, índices e registros de transações.
+
+   - **Buffer Cache**: O PostgreSQL mantém um cache de buffers em memória para reduzir a necessidade de acessos frequentes ao disco. Isso ajuda a melhorar o desempenho, pois muitas operações podem ser realizadas diretamente na memória.
+
+3. **Gestão de Transações**:
+
+   - **Controlador de Transações (Transaction Manager)**: Gerencia transações, garantindo que as operações sejam realizadas de forma consistente e que as propriedades ACID (Atomicidade, Consistência, Isolamento, Durabilidade) sejam mantidas.
+
+4. **Otimizador de Consultas**:
+
+   - **Planner**: É responsável por criar o plano de execução otimizado para as consultas. Ele decide a melhor maneira de recuperar os dados com base na estrutura do banco de dados e nas estatísticas disponíveis.
+
+5. **Módulos de Funcionalidades Adicionais**:
+
+   - **Extensões**: O PostgreSQL oferece um sistema de extensões que permite adicionar funcionalidades extras ao banco de dados, como linguagens de programação, tipos de dados personalizados, entre outros.
+
+6. **Gerenciamento de Concorrência**:
+
+   - **MVCC (Multi-Version Concurrency Control)**: O PostgreSQL utiliza o MVCC para permitir que várias transações ocorram simultaneamente sem interferir umas nas outras. Isso é fundamental para garantir a consistência dos dados em ambientes com múltiplos usuários.
+
+7. **Gestão de Segurança**:
+
+   - **Sistema de Autenticação e Autorização**: O PostgreSQL oferece um sistema robusto de autenticação e autorização para garantir que apenas usuários autorizados tenham acesso aos dados e operações permitidas.
+
+8. **Recuperação de Falhas**:
+
+   - **WAL (Write-Ahead Logging)**: O PostgreSQL utiliza uma técnica de log chamada Write-Ahead Logging para garantir a durabilidade dos dados em caso de falha. Isso significa que as alterações são registradas em um log antes de serem aplicadas aos dados no disco.
+
+Esses são alguns dos principais componentes que compõem a arquitetura do PostgreSQL. É importante notar que o PostgreSQL é altamente configurável e oferece uma ampla gama de opções de configuração para atender às necessidades específicas de diferentes ambientes e aplicações.
+
+
+-------------------------------------------------------------------------------
+
+Olá e bem-vindo ao vídeo de habilidades emulti
+tutorial neste vídeo tutorial iremos
+aprenda o que é postgres e
+sua arquitetura
+então o primeiro slide é sobre o
+introdução então o que é postgre e por que
+é tão famoso durante um período de tempo
+e uh, este é um dos mais, uh, vi
+base de dados
+hoje em dia tão um dos mais importantes
+característica do seu
+banco de dados postgre é uma empresa
+bancos de dados relacionais de código aberto de classe
+pode suportar
+sql que é uma linguagem de consulta estruturada
+e json ambos formatos para consulta e
+está lá em
+há mais de 20 anos com o
+comunidade
+desenvolvimento se falarmos sobre o uso
+ele pode ser usado para o armazenamento de dados que você
+pode usá-lo para
+data warehouse você pode usá-lo para
+geoespacial
+aplicativo, você pode usá-lo para análises
+você fala sobre qualquer coisa e é
+disponível
+é bom para todos os tipos de dados e
+é
+adequado para todos os dados avançados
+tipos e
+em termos de desempenho, é, é
+bom como qualquer outro
+banco de dados licenciado e que é
+muito caro
+se falarmos sobre os recursos, uh
+postgre está tendo o uh mvcc
+arquitetura que é multi-versão
+controle de simultaneidade, o que significa
+digamos que eu tenha disparado um select
+declaração uh da tabela emp em um
+determinado momento
+em uma linha específica eu queria
+buscar e ao mesmo tempo
+a linha foi atualizada, então haverá
+haverá alguma inconsistência se eu tentar ler
+dados, mas o que acontece quando tais
+operações acontecerem, haverá um
+instantâneo disponível dos dados anteriores
+para que
+os dados não ficam confusos
+embora este não seja o
+recurso que está disponível apenas em
+postgre, mas todos os bancos de dados relacionais
+como Oracle e outros, eles têm isso
+recursos embutidos
+e o importante é que isso é grátis
+de custo, este é de código aberto e você tem
+os controles de acesso granulares que você pode
+dar acesso aos dados específicos
+banco de dados para a função ou você pode fornecer
+acesso às visualizações das tabelas
+ou você os procedimentos desencadeiam
+uma coluna específica, você pode fornecer o
+acessar para que essas coisas você tenha o
+controle de acesso granular, você tem o
+conceito de
+espaços de tabela ou outro que não seja o seu
+espaço de tabela padrão, você pode criar um
+espaço de mesa separado você pode
+guarde todos os seus
+dados ali e isso será útil
+quando você está tentando fazer o backup
+então é apenas um
+tipo lógico de separação de outros
+bancos de dados
+há um recurso de aplicativo assíncrono
+replicação que é muito boa
+em termos de postgre
+o
+uh, os recursos de backup que são
+tremendo no postgre você tem o
+backup on-line
+uh, o que você pode fazer é igual a um
+determinado momento se você quiser
+para restaurar seu banco de dados você pode usar
+o backup quente usando uh
+backup baseado em pg em que
+algo chamado como o
+os arquivos de log que são conhecidos como
+logo em frente registrando
+que será ativado se você fizer um
+backup do seu backup básico e
+todos os arquivos que estão lá, bem
+que está logo à frente registrando se você pegar
+esses backups você pode restaurar de uma só vez
+determinado momento e que
+é útil quando você cria o modo de espera
+base de dados
+ou ou o ambiente de aplicação
+tem o apoio da comunidade internacional
+conjunto de caracteres, então esse é um dos
+outra característica importante
+e não é de admirar que o tamanho de
+seu banco de dados ele irá suportar
+que
+e quando falamos sobre a culpa
+tolerância o
+os recursos de registro à frente tornam
+perfeito adequado para qualquer particular
+recuperação de desastres quando você precisar
+recupere seu banco de dados em um ponto um
+determinado momento
+licenciamento isso está sempre incomodando o
+organizações se você falar sobre o
+famoso rd bms
+você paga o custo em termos de
+curso que você vai usar vamos
+diga, fale sobre o oráculo, então você tem
+pagar muito, muito custo de licença
+e se você estiver falando sobre o
+postgre não há custo de licença
+e ah
+mais se você for usá-lo em um
+calcule onde uh o número de códigos de CPU
+são mais do que sempre tememos pagar
+mais uh custo custo de licença para o
+uh, para o uh proprietário, esse é o uh
+a organização
+do qual compramos, digamos
+a corporação oráculo
+uh
+e no caso deste uh postgre que se
+isso é
+fontes abertas quem irá apoiá-lo
+então há uma equipe dedicada de
+colaboradores e aqueles que continuamente
+funciona e se houver algum bug
+eles são
+fixo e
+e as novas versões são lançadas ao longo de um
+período de tempo, então o licenciamento é
+código aberto e você tem o código
+você pode usá-lo e
+você pode usá-lo da maneira que quiser
+para
+se falarmos sobre a história do
+postgre então o projeto postgre foi o
+projeto postgresql foi inicialmente
+lançado por mcallister dawn breaker em
+Universidade de Berkeley que é universidade
+da Califórnia, eu acredito, e o original
+nome era postgre que é o que se refere
+para o
+versão mais antiga do banco de dados de entrada
+que foi famoso em determinado momento
+e eu acredito que esse projeto foi chutado
+desligado em 1985 e após 10 anos
+de desenvolvimento este produto foi projeto
+foi renomeado para postgresql
+devido ao seu apoio ao
+linguagem de consulta estruturada
+é o quem apoia ou trabalha no
+o, uh, o desenvolvimento deste produto
+se houver algum bug ou correção quem
+faz, uh, faz tudo isso, então é isso
+feito pelo postgresql global
+equipe de desenvolvimento
+se você falar sobre o suporte ao idioma
+isso é incrível, tem suporte para
+python java
+paul.net rubi
+uh
+c mais plus e ovc tudo é
+aí vamos falar sobre a arquitetura
+de
+de
+postgre então você é um servidor cliente
+modelo para que o cliente
+envia uma solicitação ao
+para o
+ambiente pós-cinza então postgre temos
+algo chamado de parâmetros de memória, então
+temos memória no centro então nós
+temos lá fora temos o
+o fundo
+processos tão
+o processo principal quando o servidor inicia
+existe algo chamado postmaster
+então quando um aplicativo quando o uh quando
+há uma solicitação do cliente
+vem diretamente para o post master o
+postmaster irá verificar se tem tudo
+as permissões necessárias para fazer login
+o banco de dados
+se passar disso então há um
+processo de pós-graduação gerado e, em seguida, o
+o trabalho real começa, então digamos que um
+instrução select foi disparada e que
+é armazenado no arquivo de dados, então primeiro
+todos esses valores vêm para o compartilhado
+amortecedor
+e
+o postgre vai lê-lo
+ali e então o valor é retornado
+de volta ao cliente
+para que o aplicativo se conecte ao
+processo postgre
+desculpe o post master processou o
+postmaster verifica o aplicativo corretamente
+e se for bem sucedido
+então ele conecta o aplicativo cliente
+a instância não escreve ou lê o
+aplicação diretamente ao
+arquivos de dados
+isso coloca lá no
+compartilhado
+buffer e o processo de pós-graduação atua sobre
+buffer compartilhado e
+bem buffers bem buffers é o if
+digamos que alguma modificação de dados ocorreu
+aconteceu então este buffer específico
+área será
+estar sujo e usando o
+uh, o registro à frente
+processo em segundo plano, esses serão
+retornados aos arquivos do poço que são
+tipo de arquivos de log onde todos os
+as informações serão escritas e então
+que
+informação será permanentemente
+salvo para o
+arquivos de dados de dados quando há um comentário
+então é isso é incrível em
+termos de
+o tipo de trabalho que ele faz, então há um
+verifique também o processo de ponteiro que
+o que faz o que verifica os pontos de verificação e
+em um determinado momento, seu
+o banco de dados estará em modo consistente, então
+que
+os dados nos arquivos de dados e na memória, uh
+que isso será liberado para os dados uh
+arquivos
+então isso é apenas um básico, então nós
+então temos a área de memória que temos
+compartilhado antes
+onde no valor vermelho dos dados
+os arquivos estão lá, então você tem a parede
+buffers onde em qualquer dado que seja
+o que deveria ser o que foi alterado
+tem que ser
+entre nesta área e usando a parede
+ele é gravado nos arquivos de dados, então você
+tem memória de trabalho e trabalho de manutenção
+memória
+se você ativou o arquivador, então
+os arquivos de parede são
+movido para os arquivos de parede arquivados
+então este é apenas o mesmo diagrama
+então temos o processo postmaster que
+é o processo principal então temos
+uh postgre uh então processe uh
+então estes são alguns dos importantes
+buffer compartilhado de áreas de memória
+trabalho de manutenção de memória de trabalho de buffer de parede
+memória e então você tem alguns dos
+importante muito importante
+escritor de fundo que escreve o
+buffer sujo na parede dos arquivos de dados, uh
+processo em segundo plano o que ele faz ele escolhe
+até o
+ah, o
+o
+o valor alterado dos buffers de parede e
+escreva para o
+arquivos de parede se você tiver ativado o
+arquivando então será finalmente
+retornado ao arquivo para todos os arquivos
+uh, o próximo é apenas uma descrição
+dos diferentes, uh
+então quando você começa quando diz systemctl
+status
+e postgresql
+uh, então ele mostra isso para você
+processos veremos isso em
+na demonstração, então o primeiro processo que
+é
+gerado depois
+depois que o postmaster é o logger, então
+o que faz ele grava o log de erros
+arquivo para o
+arquivo de log
+então temos o ponteiro de verificação quando um
+ponto de verificação acontece assim
+há algum intervalo predefinido quando
+onde no ponto de verificação acontece e tudo
+o sujo armazena em buffer os dados que foram
+alterado, ele é devolvido ao
+para os arquivos de dados, então você tem o escritor
+escritor de novo, uh, este é o
+escritor de fundo que
+ele grava periodicamente os buffers sujos
+para um arquivo, caso contrário, o ponto de verificação
+acontece então você tem a parede ou o escritor
+que é um processo em segundo plano que
+pega as informações da válvula
+buffers e direito ao
+bem arquivos, então você tem um dos muito
+bom recurso que é chamado de automático
+vácuo
+lançador e daí é mais ou menos
+liberando o espaço não utilizado quando houver
+são muitas inserções, atualizações e exclusões
+um monte de
+o espaço foi liberado
+nas tabelas então ele faz um
+trabalho de manutenção nisso, então vamos
+tenha uma discussão separada sobre isso então
+nós temos arquivador então
+quando quando você tem a parede
+uh ativado então logo em frente
+habilitado e
+você queria manter toda a transação
+bloqueios, então você tem que habilitar isso para que
+você pode recuperar seu banco de dados com segurança em
+um determinado ponto do tempo
+então você tem um coletor de estatísticas
+ele lhe dirá sobre o uso da tabela
+informações estatísticas, então estes são os
+e
+os processos em segundo plano que são
+responda quando você iniciar seu
+instância do postgre
+área de memória que você tem
+memória compartilhada onde no cache do banco de dados
+e o cache do log de transações acontece
+então você compartilhou o buffer, então este termo
+você pode ver em quase todos os
+versões todos os motores do banco de dados
+então o que ele faz é minimizar o
+disco i o e uh
+o que isso coloca coloca tudo maior
+tabelas para o
+o buffer
+e minimiza o tempo de acesso
+quando tem que escolher os dados do
+arquivo de dados para que ele o coloque no arquivo compartilhado
+amortecedor
+então você tem os amortecedores de parede
+o que faz lá temporariamente
+armazena alterações através do banco de dados e
+e quando tem que escrever na parede
+arquiva o processo de fundo da parede
+pega pega da parede
+buffers e escrevê-lo na parede é
+útil para backup e recuperação, então você
+tem o processo postmaster então o que é
+o postmaster processa o postmaster
+processo é o primeiro processo que é
+iniciado quando você inicia seu postgresql
+instância e executa a recuperação que
+inicializa a área de memória que
+executa os processos em segundo plano
+e
+o último que é o último mas
+não menos importante, qual é a sua memória de trabalho
+memória de trabalho de manutenção de espaço e
+buffers temporários
+esses são os diferentes
+áreas de memória que são usadas para
+Ordenação
+então quando você diz espaço de memória de trabalho isso
+é usado para
+classificação e temporário, uh
+operações de bitmap e se juntou para que o
+o valor padrão é 4 4 mb e manutenção
+memória de trabalho se você tiver o aspirador automático
+habilitado então e uh
+isso é usado principalmente para o seu
+criar índice e aspirar
+buffer temporário que é usado para o
+tabelas temporárias caso você use o
+tabelas temporárias
+e
+é isso então veremos um pequeno muito
+pequena demonstração
+o que diz
+sistemactl
+status
+então deixe-me arquivar isso
+sistemas
+ctl
+estado postgresql 12.
+então quando você disparar isso você dirá aquilo
+o status está em execução e
+você verá isso tudo isso
+então você tem o ID do processo o pid principal
+é um triplo um cinco postmaster
+e uh, isso é isso que tínhamos
+falado em
+na arquitetura este é o primeiro
+processo processo em segundo plano que inicia
+e então os outros processos são iniciados
+registrador
+uh, que registra todos os erros
+arquivo de mensagem no log de erros, então você tem
+o ponteiro de verificação, então você tem
+escritor de fundo que escreve
+o sujo primeiro depois você tem parede
+escritor que coleta as informações
+do buffer de parede e escreva na parede
+arquivos, então você tem o iniciador automático de vácuo
+uh, ele escreve, faz o automático
+aspirando, uh, trabalho, uh, como quando você
+há um índice claro acontecendo ou quando
+tem que liberar o espaço
+espaço não utilizado em uma tabela, então você tem
+o coletor de estatísticas e então você tem um
+iniciador de replicação lógica
+então isso é um básico, uh, do
+arquitetura do seu
+do seu
+do seu ambiente postgre
+e vamos rapidamente fazer uma recapitulação
+O que fizemos
+então conversamos sobre a introdução de
+ambiente postgre porque isso é assim
+famoso então conversamos sobre diferentes
+características
+nós conversamos sobre, uh
+o licenciamento que é de código aberto gratuito
+então a história do postgre então a diferença
+a arquitetura arquitetura de memória
+processos em segundo plano e diferentes
+arquivos de dados físicos onde está escrito
+e então nós nós
+discutido sobre como os dados são transmitidos
+quando um cliente solicita as informações
+e
+a definição de antecedentes diferentes
+processos
+e áreas de memória
+e
+a memória de trabalho
+componentes relacionados à área uh
+e isso é tudo
+então nós
+verifiquei o
+sistemas ctl status postgre sql 12 então
+vimos diferentes processos em segundo plano
+então vimos
+mais uma coisa que você pode ver no ps3
+hífen p triplo um cinco então isso mostra
+como
+qual é o relacionamento então postmaster
+é a base
+daqui o resto do
+processos em segundo plano são gerados e se
+você vê um dois sete um corresponde
+para o registrador
+espero que isso ajude e
+obrigado por assistir
