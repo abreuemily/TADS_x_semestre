@@ -1,6 +1,6 @@
 public class ListaLigadaExe {
     public static void main(String[] args) throws Exception {
-        ListaLigada l1 = new ListaLigada();
+        ListaLigada<String> l1 = new ListaLigada<String>();
         System.out.println(l1.getTamanho());
         l1.adicionar("Pa");
         l1.adicionar("To");

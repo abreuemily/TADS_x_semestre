@@ -1,8 +1,8 @@
-public class Elemento {
-    private Elemento proximo;
-    private String valor;
+public class Elemento<TIPO> {
+    private Elemento<TIPO> proximo;
+    private TIPO valor;
     
-    public Elemento(String novoVal){ //esse metodo indica que quando um novo node for adicionado na lista, la na classe nao exe vaai ser possivel passar o valor direto no construtor
+    public Elemento(TIPO novoVal){ //esse metodo indica que quando um novo node for adicionado na lista, la na classe nao exe vaai ser possivel passar o valor direto no construtor
         this.valor = novoVal;
     }
     /**
@@ -15,21 +15,21 @@ public class Elemento {
     /**
      * @param proximo the proximo to set
      */
-    public void setProximo(Elemento proximo) {
+    public void setProximo(Elemento<TIPO> proximo) {
         this.proximo = proximo;
     }
 
     /**
      * @return String return the valor
      */
-    public String getValor() {
+    public TIPO getValor() {
         return valor;
     }
 
     /**
      * @param valor the valor to set
      */
-    public void setValor(String valor) {
+    public void setValor(TIPO valor) {
         this.valor = valor;
     }
 

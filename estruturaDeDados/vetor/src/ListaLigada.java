@@ -1,6 +1,6 @@
-public class ListaLigada {
-    private Elemento primeiro;
-    private Elemento ultimo;
+public class ListaLigada <TIPO>{
+    private Elemento<TIPO> primeiro;
+    private Elemento<TIPO> ultimo;
     private int tamanho;
 
     public ListaLigada(){ //esse método indica que quando o objeto ListaLigada for instanciado, na hora é atribuido a tamanho o valor 0.
@@ -9,28 +9,28 @@ public class ListaLigada {
     /**
      * @return Elemento return the primeiro
      */
-    public Elemento getPrimeiro() {
+    public Elemento<TIPO> getPrimeiro() {
         return primeiro;
     }
 
     /**
      * @param primeiro the primeiro to set
      */
-    public void setPrimeiro(Elemento primeiro) {
+    public void setPrimeiro(Elemento<TIPO> primeiro) {
         this.primeiro = primeiro;
     }
 
     /**
      * @return Elemento return the ultimo
      */
-    public Elemento getUltimo() {
+    public Elemento<TIPO> getUltimo() {
         return ultimo;
     }
 
     /**
      * @param ultimo the ultimo to set
      */
-    public void setUltimo(Elemento ultimo) {
+    public void setUltimo(Elemento<TIPO> ultimo) {
         this.ultimo = ultimo;
     }
 
@@ -47,8 +47,8 @@ public class ListaLigada {
     public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
-    public void adicionar(String novoVal){
-        Elemento novoElemento = new Elemento(novoVal);
+    public void adicionar(TIPO novoVal){
+        Elemento<TIPO> novoElemento = new Elemento<TIPO>(novoVal);
         if (this.primeiro == null && this.ultimo == null){
             this.primeiro = novoElemento;
             this.ultimo = novoElemento;
@@ -61,11 +61,11 @@ public class ListaLigada {
 
     }
 
-    public void remover(String valorProcurado){
-        Elemento anterior = null;
-        Elemento atual = this.primeiro;
+    public void remover(TIPO valorProcurado){
+        Elemento<TIPO> anterior = null;
+        Elemento<TIPO> atual = this.primeiro;
         for(int i=0; i<this.getTamanho(); i++){
-            if (atual.getValor().equalsIgnoreCase(valorProcurado)){
+            if (atual.getValor().equals(valorProcurado)){
                 if (tamanho==1){
                     this.primeiro=null;
                     this.ultimo=null;
