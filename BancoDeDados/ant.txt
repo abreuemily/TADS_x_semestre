@@ -41,119 +41,19 @@ Esses são alguns dos principais componentes que compõem a arquitetura do Postg
 
 -------------------------------------------------------------------------------
 
-Olá e bem-vindo ao vídeo de habilidades emulti
-tutorial neste vídeo tutorial iremos
-aprenda o que é postgres e
-sua arquitetura
-então o primeiro slide é sobre o
-introdução então o que é postgre e por que
-é tão famoso durante um período de tempo
-e uh, este é um dos mais, uh, vi
-base de dados
-hoje em dia tão um dos mais importantes
-característica do seu
-banco de dados postgre é uma empresa
-bancos de dados relacionais de código aberto de classe
-pode suportar
-sql que é uma linguagem de consulta estruturada
-e json ambos formatos para consulta e
-está lá em
-há mais de 20 anos com o
-comunidade
-desenvolvimento se falarmos sobre o uso
-ele pode ser usado para o armazenamento de dados que você
-pode usá-lo para
-data warehouse você pode usá-lo para
-geoespacial
-aplicativo, você pode usá-lo para análises
-você fala sobre qualquer coisa e é
-disponível
-é bom para todos os tipos de dados e
-é
-adequado para todos os dados avançados
-tipos e
-em termos de desempenho, é, é
-bom como qualquer outro
-banco de dados licenciado e que é
-muito caro
-se falarmos sobre os recursos, uh
-postgre está tendo o uh mvcc
-arquitetura que é multi-versão
-controle de simultaneidade, o que significa
-digamos que eu tenha disparado um select
-declaração uh da tabela emp em um
-determinado momento
-em uma linha específica eu queria
-buscar e ao mesmo tempo
-a linha foi atualizada, então haverá
-haverá alguma inconsistência se eu tentar ler
-dados, mas o que acontece quando tais
-operações acontecerem, haverá um
-instantâneo disponível dos dados anteriores
-para que
-os dados não ficam confusos
-embora este não seja o
-recurso que está disponível apenas em
-postgre, mas todos os bancos de dados relacionais
-como Oracle e outros, eles têm isso
-recursos embutidos
-e o importante é que isso é grátis
-de custo, este é de código aberto e você tem
-os controles de acesso granulares que você pode
-dar acesso aos dados específicos
-banco de dados para a função ou você pode fornecer
-acesso às visualizações das tabelas
-ou você os procedimentos desencadeiam
-uma coluna específica, você pode fornecer o
-acessar para que essas coisas você tenha o
-controle de acesso granular, você tem o
-conceito de
-espaços de tabela ou outro que não seja o seu
-espaço de tabela padrão, você pode criar um
-espaço de mesa separado você pode
-guarde todos os seus
-dados ali e isso será útil
-quando você está tentando fazer o backup
-então é apenas um
-tipo lógico de separação de outros
-bancos de dados
-há um recurso de aplicativo assíncrono
-replicação que é muito boa
-em termos de postgre
-o
-uh, os recursos de backup que são
-tremendo no postgre você tem o
-backup on-line
-uh, o que você pode fazer é igual a um
-determinado momento se você quiser
-para restaurar seu banco de dados você pode usar
-o backup quente usando uh
-backup baseado em pg em que
-algo chamado como o
-os arquivos de log que são conhecidos como
-logo em frente registrando
-que será ativado se você fizer um
-backup do seu backup básico e
-todos os arquivos que estão lá, bem
-que está logo à frente registrando se você pegar
-esses backups você pode restaurar de uma só vez
-determinado momento e que
-é útil quando você cria o modo de espera
-base de dados
-ou ou o ambiente de aplicação
-tem o apoio da comunidade internacional
-conjunto de caracteres, então esse é um dos
-outra característica importante
-e não é de admirar que o tamanho de
-seu banco de dados ele irá suportar
-que
-e quando falamos sobre a culpa
-tolerância o
-os recursos de registro à frente tornam
-perfeito adequado para qualquer particular
-recuperação de desastres quando você precisar
-recupere seu banco de dados em um ponto um
-determinado momento
+iremos aprender o que é postgres e sua arquitetura. 
+- Introdução: O que é postgre e por que é tão famoso durante um período de tempo
+este é um dos sgbds mais utilizados hoje em dia. Uma das características mais importantes do postgres é que ele é um banco de dados relacional de código aberto de classe empresarial. 
+Ele suporta sql, que é uma linguagem de consulta estruturada, e json, ambos formatos para consulta. Está a mais de 20 anos em desenvolvimento na comunidade. sobre o uso, pode ser usado para data warehouse, aplicação geoespacial e análise de dados, por exemplo. ele suporta qualquer tipo de dado e é adequado para tipos avançados de dados. 
+Sobre os recursos, ele possui a arquitetura MVCC (Cortrole de Simultaneidade Multi Versão), ou seja, o Postgres utiliza esse recurso para permitir que várias transações ocorram simultaneamente sem interferir umas nas outras. Mas, na verdade, esse recurso não existe apenas no postgres, ele está embutido em todos os outros bancos de dados relacionais, como o Oracle por exemplo. Mas a diferença é que o postgres é livre de custos e é open source. 
+Tem tambem o controle de acesso granular, que permite que os administradores controlem quem pode acessar quais recursos do banco de dados e quais operações podem ser executadas, ou seja, você pode dar acesso a dados específicos, ou acesso as visualizações das tabelas, entre outras possibilidades. 
+Tem também o conceito de espaços de tabelas que não sejam o padrão que podem ser criados, um espaço de tabela separado que pode conter todos os dados.
+há um recurso de replicação assíncrona que é um método de replicação de dados que permite que os dados sejam escritos no servidor primário e depois copiados para o servidor secundário
+os recursos de backup no postgre são: dump SQL, backup em nível de sistema de arquivos e arquivamento contínuo. O dump SQL é uma cópia dos dados em formato SQL . O utilitário pg_dump pode ser usado para criar um dump SQL. O backup em nível de sistema de arquivos é uma cópia dos arquivos do banco de dados. O backup em nível de sistema de arquivos é útil quando você precisa fazer backup de grandes quantidades de dados e a latência não é uma preocupação crítica. O arquivamento contínuo é um método de backup que permite que os dados sejam escritos no servidor primário e depois copiados para o servidor secundário.
+E tem suporte para o conjunto de caracteres internacionais. 
+
+- Licenciamento: 
+
 licenciamento isso está sempre incomodando o
 organizações se você falar sobre o
 famoso rd bms
@@ -187,93 +87,15 @@ código aberto e você tem o código
 você pode usá-lo e
 você pode usá-lo da maneira que quiser
 para
-se falarmos sobre a história do
-postgre então o projeto postgre foi o
-projeto postgresql foi inicialmente
-lançado por mcallister dawn breaker em
-Universidade de Berkeley que é universidade
-da Califórnia, eu acredito, e o original
-nome era postgre que é o que se refere
-para o
-versão mais antiga do banco de dados de entrada
-que foi famoso em determinado momento
-e eu acredito que esse projeto foi chutado
-desligado em 1985 e após 10 anos
-de desenvolvimento este produto foi projeto
-foi renomeado para postgresql
-devido ao seu apoio ao
-linguagem de consulta estruturada
-é o quem apoia ou trabalha no
-o, uh, o desenvolvimento deste produto
-se houver algum bug ou correção quem
-faz, uh, faz tudo isso, então é isso
-feito pelo postgresql global
-equipe de desenvolvimento
-se você falar sobre o suporte ao idioma
-isso é incrível, tem suporte para
-python java
-paul.net rubi
-uh
-c mais plus e ovc tudo é
-aí vamos falar sobre a arquitetura
-de
-de
-postgre então você é um servidor cliente
-modelo para que o cliente
-envia uma solicitação ao
-para o
-ambiente pós-cinza então postgre temos
-algo chamado de parâmetros de memória, então
-temos memória no centro então nós
-temos lá fora temos o
-o fundo
-processos tão
-o processo principal quando o servidor inicia
-existe algo chamado postmaster
-então quando um aplicativo quando o uh quando
-há uma solicitação do cliente
-vem diretamente para o post master o
-postmaster irá verificar se tem tudo
-as permissões necessárias para fazer login
-o banco de dados
-se passar disso então há um
-processo de pós-graduação gerado e, em seguida, o
-o trabalho real começa, então digamos que um
-instrução select foi disparada e que
-é armazenado no arquivo de dados, então primeiro
-todos esses valores vêm para o compartilhado
-amortecedor
-e
-o postgre vai lê-lo
-ali e então o valor é retornado
-de volta ao cliente
-para que o aplicativo se conecte ao
-processo postgre
-desculpe o post master processou o
-postmaster verifica o aplicativo corretamente
-e se for bem sucedido
-então ele conecta o aplicativo cliente
-a instância não escreve ou lê o
-aplicação diretamente ao
-arquivos de dados
-isso coloca lá no
-compartilhado
-buffer e o processo de pós-graduação atua sobre
-buffer compartilhado e
-bem buffers bem buffers é o if
-digamos que alguma modificação de dados ocorreu
-aconteceu então este buffer específico
-área será
-estar sujo e usando o
-uh, o registro à frente
-processo em segundo plano, esses serão
-retornados aos arquivos do poço que são
-tipo de arquivos de log onde todos os
-as informações serão escritas e então
-que
-informação será permanentemente
-salvo para o
-arquivos de dados de dados quando há um comentário
+
+arquitetura
+
+Vamos falar sobre a arquitetura do postgre. É um modelo servidor cliente, ou seja, o cliente envia uma solicitação para o postgres então temos algo chamado de parâmetros de memória, memória no centro e
+os processos em segundo plano. Então o processo principal quando o servidor inicia o postmaster (processo principal que coordena a interação entre os clientes e o servidor de banco de dados. Ele gerencia a criação de novos processos para lidar com as conexões dos clientes)
+então quando há uma solicitação do cliente vai diretamente para o postmaster. O postmaster irá verificar se tem todas as permissões necessárias para fazer login no banco de dados. Se passar disso então há um processo de postgrade gerado e, em seguida, o
+o trabalho real começa. Então digamos que um instrução select foi disparada e que é armazenado no arquivo de dados, então primeiro
+todos esses valores vêm para o burffer compartilhado e o postgre vai ler dali e então o valor é retornado de volta ao cliente.Então o aplicativo se conecta ao processo postmaster, o postmaster verifica o aplicativo corretamente, e se for bem sucedido, ele conecta o aplicativo cliente.
+a instância não escreve ou lê o aplicativo diretamente ao arquivos de dados, mas coloca no buffer compartilhado e o processo postgres atua no buffer compartilhado e nos wal buffers (digamos que alguma modificação de dados ocorreu então esta area específica do buffer vai estar suja então usando o processo em segundo plano do write ahead log retorna para os walfilles, que são como arquivos de log pra onde toda a informação retorna e é armazenada permanentemente)
 então é isso é incrível em
 termos de
 o tipo de trabalho que ele faz, então há um
