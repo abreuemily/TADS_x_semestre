@@ -1,0 +1,31 @@
+arquitetura
+
+Vou falar sobre a arquitetura do postgres. É um modelo cliente servidor, ou seja, o cliente envia uma solicitação para o postgres então temos algo chamado de parâmetros de memória, memória no centro e
+os processos em segundo plano. Então o processo principal quando o servidor inicia é o postmaster (processo principal que coordena a interação entre os clientes e o servidor de banco de dados. Ele gerencia a criação de novos processos para lidar com as conexões dos clientes)
+então quando há uma solicitação do cliente vai diretamente para o postmaster. O postmaster irá verificar se tem todas as permissões necessárias para fazer login no banco de dados. Se passar disso então é gerado um processo de postges e, em seguida, o
+o trabalho real começa. Então digamos que um instrução select foi disparada e que é armazenado no arquivo de dados, então primeiro
+todos esses valores vêm para o burffer compartilhado e o postgres vai ler dali e então o valor é retornado de volta ao cliente. Então o aplicativo se conecta ao processo postmaster, o postmaster verifica o aplicativo corretamente, e se for bem sucedido, ele conecta o aplicativo cliente.
+a instância não escreve ou lê o aplicativo diretamente ao arquivos de dados, mas coloca no buffer compartilhado e o processo postgres atua no buffer compartilhado e nos wal buffers (digamos que alguma modificação de dados ocorreu então esta area específica do buffer vai estar suja então usando o processo em segundo plano do write ahead log retorna para os walfilles, que são como arquivos de log pra onde toda a informação retorna e é armazenada permanentemente)
+Então há um processo check pointer que verifica os check points em um determinado momento, o banco de dados estará consistente, então os dados nos arquivos de dados e na memória, vai ser liberado para os arquivos de dados.
+Então nós temos a área de memória, o buffer compartilhado, wal buffers,   memória de trabalho e memória de trabalho de manutenção
+Se o arquivador foi ativado, então os walfilles são movido para os walfilles arquivados
+
+Então temos o processo postmaster que é o processo principal, temos
+o processo postgres, estes são área de memória, buffer compartilhado, walbuffer, memória de trabalho, memória de manutenção de trabalho e o background writer que escreve o buffer sujo nos arquivos de dados,  é um processo em segundo plano que escolhe o valor alterado dos walbuffers e escreva para os walfilles. Se o arquivador estiver ativado então vai retornar para os walfilles arquivados
+
+
+----------------------------------------------------
+**Merge Join** é um algoritmo de junção usado em bancos de dados relacionais para combinar duas tabelas com base em uma condição de junção ¹. O Merge Join é um dos três algoritmos de junção mais comuns, juntamente com o Nested Loop Join e o Hash Join ¹. O Merge Join é usado quando as tabelas a serem combinadas estão ordenadas com base na coluna de junção ¹. O Merge Join funciona comparando os valores da coluna de junção nas duas tabelas e combinando as linhas correspondentes ¹. O Merge Join é geralmente mais rápido do que o Nested Loop Join e o Hash Join para tabelas grandes ¹. No entanto, o Merge Join pode ser mais lento do que o Nested Loop Join para tabelas pequenas ¹. O Merge Join é suportado por muitos sistemas de gerenciamento de banco de dados relacionais, incluindo o SQL Server ¹². 
+
+Por outro lado, **CREATE INDEX** é um comando SQL que é usado para criar um índice em uma tabela de banco de dados ³⁴. O índice é uma estrutura de dados que acelera o acesso aos dados de registros especificados em uma tabela de banco de dados ³. 
+
+**VACUUM** é um comando SQL que é usado para limpar o banco de dados e recuperar o espaço ocupado por tuplas mortas ⁵. Quando uma tupla é excluída ou obsoleta por uma atualização, ela não é fisicamente removida da tabela; ela permanece presente até que um VACUUM seja feito ⁵. Portanto, é necessário fazer o VACUUM periodicamente, especialmente em tabelas frequentemente atualizadas ⁵. 
+
+**ANALYZE** é um comando SQL que é usado para coletar estatísticas sobre uma tabela específica ou todas as tabelas em um esquema especificado . Essas estatísticas são usadas pelo otimizador de consulta para encontrar um plano de execução de consulta melhor . O comando ANALYZE TABLE coleta estatísticas sobre uma tabela específica . O comando ANALYZE TABLES coleta estatísticas sobre todas as tabelas em um esquema especificado . O comando ANALYZE pode ser usado para coletar estatísticas sobre o número de linhas e o tamanho em bytes de uma tabela . O comando ANALYZE pode ser usado para coletar estatísticas sobre colunas específicas em uma tabela . O comando ANALYZE pode ser usado para coletar estatísticas sobre todas as colunas em uma tabela . O comando ANALYZE pode ser usado para coletar estatísticas sobre todas as tabelas em um esquema especificado . Para mais informações, consulte a documentação do PostgreSQL .
+
+Origem: conversa com o Bing, 09/11/2023
+(1) Merge Join - SQLServerFast. https://sqlserverfast.com/epr/merge-join/.
+(2) Is Merge and Merge join same in SQL Server? - Stack Overflow. https://stackoverflow.com/questions/40713883/is-merge-and-merge-join-same-in-sql-server.
+(3) sql - Using a join in a merge statement - Stack Overflow. https://stackoverflow.com/questions/12903446/using-a-join-in-a-merge-statement.
+(4) Merge Join Transformation - SQL Server Integration Services (SSIS .... https://learn.microsoft.com/en-us/sql/integration-services/data-flow/transformations/merge-join-transformation?view=sql-server-ver16.
+(5) MERGE (Transact-SQL) - SQL Server | Microsoft Learn. https://learn.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql?view=sql-server-ver16.
