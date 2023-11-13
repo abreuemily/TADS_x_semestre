@@ -1,0 +1,15 @@
+- criar um vídeo apresentando a ferramenta que transforma tabelas de arquivo pdf em csv
+
+1- introdução: há um documento cujo parte dele será a introdução do vídeo. Informações sobre o projeto.
+
+2- mostrar a ferramenta, dizer que ela foi baixada do github
+
+3- mostrar o que é preciso para ela funcionar: abrir o cmd, baixar as bibliotecas necessárias (tabula-py e pypdf2). Mostrar os comandos corretamente. não só isso (tinha esquecido que são pessoas leigas no assunto), primeiro é preciso baixar o python e o java. depois de baixar o python, aí sim pode baixar as bibliotecas. depois disso, é preciso configurar as variáveis de ambiente do java. Depois de passar pelo passo a passo, já deve ser possível utilizar a ferramenta.
+
+4- após, abrir a ferramenta e mostrar que a primeira coisa que acontece é ser criado um diretório onde vão ser armazenados os arquivos csv.
+
+5- demonstrar a ferramenta funcionando com 1 arquivo pdf, mostrar como ficou o csv no diretório e mostrar o resultado do documento.
+
+6- depois disso, mostrar a ferramenta funcionando com 3 pdf's, mostrar os resultados dos arquivos csv criados no diretório e mostrar os seus resultados.
+
+7- fechou o caixão :P
