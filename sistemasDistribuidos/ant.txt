@@ -5,3 +5,12 @@
 - ex de sistema distribuído: amazon, google, yahoo...
 
 - objetivos de um sd: fazer o link entre users e recursos, transparencia (deseja-se que o sistema seja visto como único. iludir positivamente o user (oculta diversos acontecimentos complexos de mais para um leigo)), flexibilidade, escalabilidade (quão facil um sistema cresce ou diminui (pode ser de tamanho, geográfica ou administrativa))
+
+- componente: modulo que pode ser instanciado e distruido tambem. possuem interfaces requeridas, são substituiveis.
+- conexão: coomo os componentes são conectados
+- dados intercambiados: forma de troca de dados entre componentes
+- formas de configuração:maneiras como os componentes são configurados.
+- arquitetura em camadas:  componentes organizados em camadas
+- arquitetura em objetos: objetos são os componentes, conectados por chamada remota
+- arquitetura centrada em dados: componentes se comunicam por repo comum, como uma caixa postal. fracamente acoplado. usada em iot
+- arquitetura baseada em eventos:  sistem publicar-subbescrever, 

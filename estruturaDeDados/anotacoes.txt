@@ -3,3 +3,9 @@ Big O
 N² -> se temos 10^9 de pixels de uma imagem para enviar, então demorará 10²^9, ou seja, 10^18 nanosegundos, o que é igual a 31.2 ano 
 N log2 N -> na mesma situation do N², demorará 30*10^9 nanosegundos, ou seja, 30 segundos
 logo, percebemos que o segundo software é mais eficiente.
+---------------------------------------------------
+
+quicksort
+
+O algoritmo Quick Sort trabalha ordenando uma sequência qualquer de valores dividindo-a em subsequências menores, aplicando recursão para ordenar cada uma destas subsequências e por fim, concatenando-as novamente em uma sequência idêntica a original, porem, já ordenada. 
+O quicksort tem a seguinte propriedade: se escolhermos qualquer número de uma lista ordenada, esse número será o pivô, e a esquerda dele só haverão números menores e, a direita, maiores que ele. Então, a ideia base do quicksort é escolher um número de uma lista não ordenada, e esse número será o pivô, e daí posicionar os números menores que ele a sua esquerda e os maiores, a sua direita. Esse passo a passo é repetido algumas vezesa até que a lista esteja ordenada, de modo que qualquer número escolhido tenha a propriedade preservada.
