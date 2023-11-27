@@ -95,5 +95,9 @@ public class ListaLigada <TIPO>{
         }
         return atual;
     }
+    
+    public iteratorListaLigada<TIPO> getIterator(){
+    	return new iteratorListaLigada<TIPO>(this.primeiro);
+    }
 
 }

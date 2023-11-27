@@ -8,4 +8,16 @@ logo, percebemos que o segundo software é mais eficiente.
 quicksort
 
 O algoritmo Quick Sort trabalha ordenando uma sequência qualquer de valores dividindo-a em subsequências menores, aplicando recursão para ordenar cada uma destas subsequências e por fim, concatenando-as novamente em uma sequência idêntica a original, porem, já ordenada. 
-O quicksort tem a seguinte propriedade: se escolhermos qualquer número de uma lista ordenada, esse número será o pivô, e a esquerda dele só haverão números menores e, a direita, maiores que ele. Então, a ideia base do quicksort é escolher um número de uma lista não ordenada, e esse número será o pivô, e daí posicionar os números menores que ele a sua esquerda e os maiores, a sua direita. Esse passo a passo é repetido algumas vezesa até que a lista esteja ordenada, de modo que qualquer número escolhido tenha a propriedade preservada.
+O quicksort tem a seguinte propriedade: se escolhermos qualquer número de uma lista ordenada, a esquerda dele só haverão números menores e, a direita, maiores que ele. Então, a ideia base do quicksort é escolher um número de uma lista não ordenada, e esse número será o pivô, e daí posicionar os números menores que ele a sua esquerda e os maiores, a sua direita. Esse passo a passo é repetido algumas vezes até que a lista esteja ordenada, de modo que qualquer número escolhido tenha a propriedade preservada.
+---------------------------------------------------
+1- como o quick sort trabalha
+
+o algorítmo quicksort trabalha ordenando uma sequencia qualquer de valores dividindo-a em subsequencias menores, aplicando recursão para ordenar cada uma dessas subsequencias e por fim concatenando-as novamente em uma sequencia identica a original, porém já ordenada.
+
+2- propriedade do quick sort
+
+o quick sort tem a seguinte propriedade: se escolhermos qualquer número da lista ordenada, a esquerda dele só haverão numeros menores e, a direita, maiores que ele. 
+
+3- ideia base do quick sort
+
+então a ideia base do quicksort é escolher um número de uma lista não ordenada, e esse numero será o pivô, e daí posicionar os números menores que ele a sua esquerda e os maiores, a sua direita. esse passo a passo será repetido algumas vezes até que a lista esteja ordenada, de modo que qualquer número escolhido tenha a propriedade preservada
