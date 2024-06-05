@@ -20,7 +20,51 @@
             });
         });
     </script>
+<style>
+html,
+body {
+  height: 100vh;
+}
 
+body {
+  background-color: #234;
+}
+
+.box {
+  background-color: #123;
+}
+
+.menu-list li a {
+  background-color: #123;
+  border-radius: 20px;
+}
+
+.menu-list li{
+  margin-bottom: 0.5em;;
+}
+
+.box label,
+.box h1,
+.box p {
+  color: #ffffff;
+}
+
+.menu-container {
+  background-color: #4A5D6F;
+  height: 100vh;
+}
+
+
+.menu-list a.active,
+.menu-list a.clicked {
+  background-color: #007bff; 
+  color:#007bff; 
+  font-weight: bold; 
+ 
+}
+
+
+</style>
 </head>
 
 <body>
