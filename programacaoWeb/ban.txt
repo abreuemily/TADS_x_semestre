@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Automatizações do SAC</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <script src="../static/js/htmx.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu-list li a").on('click', function () {
+                
+                $(".menu-list li a").removeClass('clicked');
+                
+                $(this).addClass('clicked');
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class='columns'>
+        <div class="column is-2 menu-container p-6">
+            <aside class='menu'>
+                <ul class="menu-list">
+
+                    <li>
+                        <figure class="has-text-centered">
+                            <img width="200" height="200"
+                                src="{{ url_for('static', filename='images/MicrosoftTeams-image.png') }}"
+                                alt="Icone Call Center" />
+                        </figure>
+                    </li>
+
+                    <li class="mt-5">
+                        <a href="{{ url_for('demandas_Em_Aberto') }}" class="has-text-primary-100 has-text-centered ">
+                            <span><p>Demandas Em Aberto</p></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('pesquisa_satisfacao') }}"
+                            class="has-text-primary-100 has-text-centered "><span><p>Pesquisa de Satisfação</p></span></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('sistema_sac') }}" class="has-text-primary-100 has-text-centered ">
+                            <span><p>Indicadores do SAC</p></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('outbound_voz_sac') }}" class="has-text-primary-100 has-text-centered ">
+                            <span><p>Indicadores de Agentes</p></span>
+                        </a>
+                    </li>
+
+                </ul>
+            </aside>
+        </div>
+
+        <div class="column"></div>
+
+        <div class='column is-align-self-center'>
+            <form class='box' action="{{ url_for('demandasEmAbertoEXE') }}" method="post" id="report-form">
+                <h1 class='title has-text-centered'>Demandas Em Aberto</h1>
+                <button class="button is-link is-fullwidth is-rounded" type="submit" id="submit-button">Exportar Relatório</button>
+                <div id="response-container">
+                    <p class="subtitle is-5 has-text-centered" id="status" style="display:none;"></p>
+                    <p class="subtitle is-5 has-text-centered" id="resultado" style="display:none;"></p>
+                    <p class="subtitle is-5 has-text-centered" id="erro" style="display:none;"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class='column'></div>
+    </div>
+
+    <script>
+        document.getElementById('report-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var statusContainer = document.getElementById("status");
+            var resultadoContainer = document.getElementById("resultado");
+            var erroContainer = document.getElementById("erro");
+
+            
+            statusContainer.innerHTML = 'Script está sendo executado...';
+            statusContainer.style.display = 'block';
+            resultadoContainer.style.display = 'none';
+            erroContainer.style.display = 'none';
+
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    
+                    const intervalId = setInterval(() => {
+                        fetch('/status')
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.etapa) {
+                                    statusContainer.innerHTML = data.etapa;
+                                    statusContainer.style.display = 'block';
+                                } else {
+                                    statusContainer.style.display = 'none';
+                                }
+
+                                if (data.excel_final) {
+                                    resultadoContainer.innerHTML = data.excel_final;
+                                    resultadoContainer.style.display = 'block';
+                                    statusContainer.style.display = 'none';
+                                    clearInterval(intervalId);  
+                                }
+
+                                if (data.erro) {
+                                    erroContainer.innerHTML = data.erro;
+                                    erroContainer.style.display = 'block';
+                                    statusContainer.style.display = 'none';
+                                    clearInterval(intervalId);  
+                                }
+                            })
+                            .catch(error => {
+                                erroContainer.innerHTML = 'Erro ao obter status do servidor';
+                                erroContainer.style.display = 'block';
+                                statusContainer.style.display = 'none';
+                                clearInterval(intervalId);  
+                            });
+                    }, 3000);  
+                } else {
+                    erroContainer.innerHTML = data.message;
+                    erroContainer.style.display = 'block';
+                    statusContainer.style.display = 'none';
+                }
+            })
+            .catch(error => {
+                erroContainer.innerHTML = 'Erro ao enviar o formulário';
+                erroContainer.style.display = 'block';
+                statusContainer.style.display = 'none';
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
