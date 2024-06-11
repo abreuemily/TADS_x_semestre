@@ -1,0 +1,14 @@
+git init  ---> inicia um repo numa pasta
+git global user.name "nameee" ---> configura o nome do user
+git global user.email "nameee@gmail.com" ----> configura o emmail do user
+git branch ---> verifica qual branch está selecionado
+git branch nomeeedobranch --> cria um branch novo
+git checkout -b nomeeedobranch ---> cria um branch e o seleciona
+git checkout namebranch ---> troca de branch (branch que já deve existir)
+git status ---> verifica o status do repo, se algum arquivo foi modificado
+git log ---> exibe o histórico dos commits
+git add --all --> adciona todas as modificações do repo no branch selecionado
+git commit -m "mensagem" ---> comita as modificações no branch. agora esta é a forma do branch selecionado
+git commit -a -m "mensagem" --> comita as modificações sem precisar passar pelo git add --all (ideal para pequenas modificações no repo)
+git status --short --> exibe o status do repo de forma resumida
+
